@@ -7,7 +7,7 @@ import { ProjectList } from '@/components/student/project-list'
 import { CompetencyMap } from '@/components/student/competency-map'
 import { TransformationArc } from '@/components/student/transformation-arc'
 import { Button } from '@/components/ui/button'
-import { Printer, Linkedin, MessageSquarePlus, Share2 } from 'lucide-react'
+import { Printer, Linkedin, MessageSquarePlus, Share2, ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 import { cookies } from 'next/headers'
 import { OutreachDialog } from '@/components/recruiter/outreach-dialog'
@@ -44,7 +44,11 @@ export default async function CandidateDetailPage({ params }: { params: Promise<
                 {/* Abstract BG Pattern */}
                 <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500 via-purple-500 to-transparent"></div>
 
-                <div className="container mx-auto px-4 py-16 relative z-10">
+                <div className="container mx-auto px-4 py-8 relative z-10">
+                    <Link href="/recruiter/discover" className="inline-flex items-center text-slate-400 hover:text-white transition-colors mb-8 group">
+                        <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
+                        Back to Cohort
+                    </Link>
                     <div className="flex flex-col md:flex-row gap-8 items-end">
                         {/* Huge Avatar */}
                         <div className="relative">
