@@ -51,11 +51,9 @@ export default async function Home() {
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
-                <Link href="/login">
-                  <Button variant="outline" size="lg" className="border-slate-200 text-slate-600 hover:text-slate-900 rounded-none px-8 py-7 text-lg font-medium">
-                    Student Login
-                  </Button>
-                </Link>
+                <Button variant="outline" size="lg" className="border-slate-200 text-slate-600 hover:text-slate-900 rounded-none px-8 py-7 text-lg font-medium">
+                  Manage Profile
+                </Button>
               </div>
             </div>
 
