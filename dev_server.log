@@ -1,0 +1,798 @@
+
+> temp_app@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.0 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.16:3000
+
+✓ Starting...
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+✓ Ready in 375ms
+ GET / 200 in 381ms (compile: 298ms, proxy.ts: 39ms, render: 45ms)
+ GET /login 200 in 429ms (compile: 387ms, proxy.ts: 4ms, render: 38ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 41ms (compile: 5ms, proxy.ts: 10ms, render: 26ms)
+ POST /login 303 in 86ms (compile: 6ms, proxy.ts: 5ms, render: 75ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 13ms (compile: 1210µs, proxy.ts: 1492µs, render: 11ms)
+ POST /login 303 in 33ms (compile: 4ms, proxy.ts: 2ms, render: 27ms)
+ GET /login 200 in 31ms (compile: 3ms, proxy.ts: 4ms, render: 23ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 14ms (compile: 1797µs, proxy.ts: 1615µs, render: 11ms)
+ POST /login 303 in 39ms (compile: 4ms, proxy.ts: 6ms, render: 28ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 12ms (compile: 1042µs, proxy.ts: 1196µs, render: 10ms)
+ POST /login 303 in 35ms (compile: 4ms, proxy.ts: 3ms, render: 27ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 11ms (compile: 1284µs, proxy.ts: 1465µs, render: 8ms)
+ POST /login 303 in 32ms (compile: 3ms, proxy.ts: 4ms, render: 24ms)
+ GET /login 200 in 40ms (compile: 4ms, proxy.ts: 1820µs, render: 34ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 12ms (compile: 1011µs, proxy.ts: 3ms, render: 9ms)
+ POST /login 303 in 28ms (compile: 3ms, proxy.ts: 3ms, render: 22ms)
+ GET /login 200 in 21ms (compile: 1684µs, proxy.ts: 2ms, render: 17ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 12ms (compile: 1469µs, proxy.ts: 1126µs, render: 9ms)
+ POST /login 303 in 33ms (compile: 5ms, proxy.ts: 6ms, render: 23ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 33ms (compile: 1952µs, proxy.ts: 2ms, render: 28ms)
+ POST /login 303 in 61ms (compile: 4ms, proxy.ts: 1892µs, render: 55ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 11ms (compile: 965µs, proxy.ts: 1325µs, render: 9ms)
+ POST /login 303 in 26ms (compile: 3ms, proxy.ts: 3ms, render: 20ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 17ms (compile: 2ms, proxy.ts: 1259µs, render: 13ms)
+ POST /login 303 in 37ms (compile: 1184µs, proxy.ts: 1804µs, render: 34ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 15ms (compile: 986µs, proxy.ts: 1446µs, render: 13ms)
+ POST /login 303 in 33ms (compile: 5ms, proxy.ts: 1362µs, render: 27ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 12ms (compile: 1608µs, proxy.ts: 3ms, render: 8ms)
+ POST /login 303 in 32ms (compile: 3ms, proxy.ts: 4ms, render: 25ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 15ms (compile: 1329µs, proxy.ts: 2ms, render: 12ms)
+ POST /login 303 in 33ms (compile: 2ms, proxy.ts: 1483µs, render: 30ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 12ms (compile: 1793µs, proxy.ts: 945µs, render: 9ms)
+ POST /login 303 in 29ms (compile: 4ms, proxy.ts: 3ms, render: 22ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 10ms (compile: 985µs, proxy.ts: 1718µs, render: 8ms)
+ POST /login 303 in 22ms (compile: 2ms, proxy.ts: 1169µs, render: 18ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 13ms (compile: 860µs, proxy.ts: 1325µs, render: 11ms)
+ POST /login 303 in 26ms (compile: 1493µs, proxy.ts: 1743µs, render: 23ms)
+ GET / 200 in 85ms (compile: 3ms, proxy.ts: 4ms, render: 78ms)
+ GET /login 200 in 58ms (compile: 4ms, proxy.ts: 6ms, render: 48ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 12ms (compile: 1334µs, proxy.ts: 1351µs, render: 9ms)
+ POST /login 303 in 28ms (compile: 1945µs, proxy.ts: 3ms, render: 23ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 13ms (compile: 1979µs, proxy.ts: 1085µs, render: 10ms)
+ POST /login 303 in 31ms (compile: 1153µs, proxy.ts: 1903µs, render: 28ms)
+ GET / 200 in 51ms (compile: 6ms, proxy.ts: 3ms, render: 42ms)
+ GET /login 200 in 58ms (compile: 3ms, proxy.ts: 6ms, render: 50ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 12ms (compile: 1509µs, proxy.ts: 1397µs, render: 9ms)
+ POST /login 303 in 34ms (compile: 4ms, proxy.ts: 3ms, render: 27ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 12ms (compile: 964µs, proxy.ts: 879µs, render: 10ms)
+ POST /login 303 in 31ms (compile: 3ms, proxy.ts: 4ms, render: 24ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 12ms (compile: 3ms, proxy.ts: 996µs, render: 9ms)
+ POST /login 303 in 26ms (compile: 1580µs, proxy.ts: 3ms, render: 21ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 16ms (compile: 3ms, proxy.ts: 1906µs, render: 11ms)
+ POST /login 303 in 31ms (compile: 1973µs, proxy.ts: 1614µs, render: 28ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 19ms (compile: 1952µs, proxy.ts: 1276µs, render: 15ms)
+ POST /login 303 in 34ms (compile: 1958µs, proxy.ts: 1207µs, render: 31ms)
+ GET /login 200 in 35ms (compile: 1911µs, proxy.ts: 2ms, render: 31ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 13ms (compile: 1547µs, proxy.ts: 2ms, render: 9ms)
+ POST /login 303 in 37ms (compile: 4ms, proxy.ts: 4ms, render: 29ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 11ms (compile: 860µs, proxy.ts: 785µs, render: 9ms)
+ POST /login 303 in 24ms (compile: 1377µs, proxy.ts: 1280µs, render: 21ms)
+ GET /login 200 in 80ms (compile: 5ms, proxy.ts: 6ms, render: 70ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 13ms (compile: 1340µs, proxy.ts: 2ms, render: 9ms)
+ POST /login 303 in 31ms (compile: 2ms, proxy.ts: 2ms, render: 27ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 14ms (compile: 1928µs, proxy.ts: 1032µs, render: 11ms)
+ POST /login 303 in 29ms (compile: 2ms, proxy.ts: 1690µs, render: 25ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 13ms (compile: 1586µs, proxy.ts: 1043µs, render: 10ms)
+ POST /login 303 in 26ms (compile: 3ms, proxy.ts: 1609µs, render: 21ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 10ms (compile: 853µs, proxy.ts: 929µs, render: 8ms)
+ POST /login 303 in 23ms (compile: 1472µs, proxy.ts: 1055µs, render: 21ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 11ms (compile: 960µs, proxy.ts: 1408µs, render: 8ms)
+ POST /login 303 in 25ms (compile: 3ms, proxy.ts: 3ms, render: 20ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 14ms (compile: 1307µs, proxy.ts: 1365µs, render: 11ms)
+ POST /login 303 in 43ms (compile: 3ms, proxy.ts: 1557µs, render: 38ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 12ms (compile: 894µs, proxy.ts: 951µs, render: 10ms)
+ POST /login 303 in 28ms (compile: 3ms, proxy.ts: 1133µs, render: 25ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 17ms (compile: 3ms, proxy.ts: 1873µs, render: 12ms)
+ POST /login 303 in 33ms (compile: 1723µs, proxy.ts: 1602µs, render: 30ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 20ms (compile: 1983µs, proxy.ts: 3ms, render: 16ms)
+ POST /login 303 in 37ms (compile: 1748µs, proxy.ts: 1764µs, render: 33ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 13ms (compile: 925µs, proxy.ts: 960µs, render: 12ms)
+ POST /login 303 in 30ms (compile: 3ms, proxy.ts: 1476µs, render: 25ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 12ms (compile: 905µs, proxy.ts: 1319µs, render: 10ms)
+ POST /login 303 in 25ms (compile: 3ms, proxy.ts: 1794µs, render: 21ms)
+ GET /login 200 in 49ms (compile: 2ms, proxy.ts: 6ms, render: 40ms)
+ GET /login 200 in 23ms (compile: 1226µs, proxy.ts: 1734µs, render: 20ms)
+ GET /login 200 in 36ms (compile: 4ms, proxy.ts: 5ms, render: 27ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 10ms (compile: 1102µs, proxy.ts: 962µs, render: 8ms)
+ POST /login 303 in 23ms (compile: 1455µs, proxy.ts: 1599µs, render: 20ms)
+ GET /login 200 in 20ms (compile: 3ms, proxy.ts: 1027µs, render: 16ms)
+Skipping Supabase Auth (Demo Mode)
+ GET /login 200 in 9ms (compile: 942µs, proxy.ts: 1279µs, render: 7ms)
+ POST /login 303 in 22ms (compile: 2ms, proxy.ts: 1460µs, render: 18ms)
+ GET /login 200 in 21ms (compile: 1463µs, proxy.ts: 3ms, render: 16ms)
+ GET / 200 in 27ms (compile: 6ms, proxy.ts: 1593µs, render: 19ms)
+ GET / 200 in 9ms (compile: 1151µs, proxy.ts: 1177µs, render: 6ms)
+ GET /login 200 in 59ms (compile: 45ms, proxy.ts: 1564µs, render: 12ms)
+ GET / 200 in 53ms (compile: 3ms, proxy.ts: 2ms, render: 48ms)
+ GET /login 200 in 50ms (compile: 39ms, proxy.ts: 1317µs, render: 10ms)
+✓ Compiled in 20ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 41ms
+ GET /login 200 in 93ms (compile: 31ms, proxy.ts: 918µs, render: 61ms)
+ GET /login 200 in 17ms (compile: 1254µs, proxy.ts: 1318µs, render: 15ms)
+Skipping Supabase Auth (Demo Mode)
+ POST /login 200 in 11ms (compile: 1131µs, proxy.ts: 1568µs, render: 8ms)
+ GET /login 200 in 6ms (compile: 1318µs, proxy.ts: 773µs, render: 4ms)
+ GET / 200 in 14ms (compile: 2ms, proxy.ts: 1209µs, render: 11ms)
+ GET /login 200 in 15ms (compile: 977µs, proxy.ts: 1270µs, render: 13ms)
+Skipping Supabase Auth (Demo Mode)
+ POST /login 200 in 12ms (compile: 2ms, proxy.ts: 4ms, render: 6ms)
+ GET /login 200 in 10ms (compile: 1482µs, proxy.ts: 1464µs, render: 7ms)
+ GET /login 200 in 44ms (compile: 6ms, proxy.ts: 5ms, render: 33ms)
+Skipping Supabase Auth (Demo Mode)
+ POST /login 200 in 25ms (compile: 5ms, proxy.ts: 6ms, render: 13ms)
+ GET /login 200 in 14ms (compile: 2ms, proxy.ts: 3ms, render: 9ms)
+✓ Compiled in 50ms
+⨯ ./app/auth/actions.ts:24:9
+Parsing ecmascript source code failed
+[0m [90m 22 |[39m
+ [90m 23 |[39m     [36mif[39m (role [33m===[39m [32m'recruiter'[39m) {
+[31m[1m>[22m[39m[90m 24 |[39m         [36mreturn[39m { success[33m:[39m [36mtrue[39m[33m,[39m redirectUrl[33m:[39m [32m'/recruiter/discover'[39m }
+ [90m    |[39m         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 25 |[39m     } [36melse[39m {
+ [90m 26 |[39m         [36mreturn[39m { success[33m:[39m [36mtrue[39m[33m,[39m redirectUrl[33m:[39m [32m'/student/profile'[39m }
+ [90m 27 |[39m     }[0m
+
+Return statement is not allowed here
+
+
+
+./app/auth/actions.ts:26:9
+Parsing ecmascript source code failed
+[0m [90m 24 |[39m         [36mreturn[39m { success[33m:[39m [36mtrue[39m[33m,[39m redirectUrl[33m:[39m [32m'/recruiter/discover'[39m }
+ [90m 25 |[39m     } [36melse[39m {
+[31m[1m>[22m[39m[90m 26 |[39m         [36mreturn[39m { success[33m:[39m [36mtrue[39m[33m,[39m redirectUrl[33m:[39m [32m'/student/profile'[39m }
+ [90m    |[39m         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 27 |[39m     }
+ [90m 28 |[39m }
+ [90m 29 |[39m[0m
+
+Return statement is not allowed here
+
+
+
+./app/auth/actions.ts:36:5
+Parsing ecmascript source code failed
+[0m [90m 34 |[39m
+ [90m 35 |[39m [36mif[39m (signInError) {
+[31m[1m>[22m[39m[90m 36 |[39m     [36mreturn[39m { error[33m:[39m signInError[33m.[39mmessage }
+ [90m    |[39m     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 37 |[39m }
+ [90m 38 |[39m
+ [90m 39 |[39m [90m// [SECURE] Fetch the actual role from the database, do not trust the form input[39m[0m
+
+Return statement is not allowed here
+
+
+
+./app/auth/actions.ts:42:12
+Parsing ecmascript source code failed
+[0m [90m 40 |[39m [36mconst[39m { data[33m:[39m { user } } [33m=[39m [36mawait[39m supabase[33m.[39mauth[33m.[39mgetUser()
+ [90m 41 |[39m
+[31m[1m>[22m[39m[90m 42 |[39m [36mif[39m ([33m![39muser) [36mreturn[39m { error[33m:[39m [32m'Login failed'[39m }
+ [90m    |[39m            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 43 |[39m
+ [90m 44 |[39m [36mconst[39m { data[33m:[39m profile } [33m=[39m [36mawait[39m supabase
+ [90m 45 |[39m     [33m.[39m[36mfrom[39m([32m'profiles'[39m)[0m
+
+Return statement is not allowed here
+
+
+
+./app/auth/actions.ts:65:1
+Parsing ecmascript source code failed
+[0m [90m 63 |[39m }
+ [90m 64 |[39m
+[31m[1m>[22m[39m[90m 65 |[39m [36mreturn[39m { success[33m:[39m [36mtrue[39m[33m,[39m redirectUrl[33m:[39m target }
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 66 |[39m }
+ [90m 67 |[39m
+ [90m 68 |[39m [36mexport[39m [36masync[39m [36mfunction[39m signup(formData[33m:[39m [33mFormData[39m) {[0m
+
+Return statement is not allowed here
+
+
+ GET /login 500 in 301ms (compile: 208ms, proxy.ts: 46ms, render: 47ms)
+⨯ ./app/auth/actions.ts:24:9
+Parsing ecmascript source code failed
+[0m [90m 22 |[39m
+ [90m 23 |[39m     [36mif[39m (role [33m===[39m [32m'recruiter'[39m) {
+[31m[1m>[22m[39m[90m 24 |[39m         [36mreturn[39m { success[33m:[39m [36mtrue[39m[33m,[39m redirectUrl[33m:[39m [32m'/recruiter/discover'[39m }
+ [90m    |[39m         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 25 |[39m     } [36melse[39m {
+ [90m 26 |[39m         [36mreturn[39m { success[33m:[39m [36mtrue[39m[33m,[39m redirectUrl[33m:[39m [32m'/student/profile'[39m }
+ [90m 27 |[39m     }[0m
+
+Return statement is not allowed here
+
+
+
+./app/auth/actions.ts:26:9
+Parsing ecmascript source code failed
+[0m [90m 24 |[39m         [36mreturn[39m { success[33m:[39m [36mtrue[39m[33m,[39m redirectUrl[33m:[39m [32m'/recruiter/discover'[39m }
+ [90m 25 |[39m     } [36melse[39m {
+[31m[1m>[22m[39m[90m 26 |[39m         [36mreturn[39m { success[33m:[39m [36mtrue[39m[33m,[39m redirectUrl[33m:[39m [32m'/student/profile'[39m }
+ [90m    |[39m         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 27 |[39m     }
+ [90m 28 |[39m }
+ [90m 29 |[39m[0m
+
+Return statement is not allowed here
+
+
+
+./app/auth/actions.ts:36:5
+Parsing ecmascript source code failed
+[0m [90m 34 |[39m
+ [90m 35 |[39m [36mif[39m (signInError) {
+[31m[1m>[22m[39m[90m 36 |[39m     [36mreturn[39m { error[33m:[39m signInError[33m.[39mmessage }
+ [90m    |[39m     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 37 |[39m }
+ [90m 38 |[39m
+ [90m 39 |[39m [90m// [SECURE] Fetch the actual role from the database, do not trust the form input[39m[0m
+
+Return statement is not allowed here
+
+
+
+./app/auth/actions.ts:42:12
+Parsing ecmascript source code failed
+[0m [90m 40 |[39m [36mconst[39m { data[33m:[39m { user } } [33m=[39m [36mawait[39m supabase[33m.[39mauth[33m.[39mgetUser()
+ [90m 41 |[39m
+[31m[1m>[22m[39m[90m 42 |[39m [36mif[39m ([33m![39muser) [36mreturn[39m { error[33m:[39m [32m'Login failed'[39m }
+ [90m    |[39m            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 43 |[39m
+ [90m 44 |[39m [36mconst[39m { data[33m:[39m profile } [33m=[39m [36mawait[39m supabase
+ [90m 45 |[39m     [33m.[39m[36mfrom[39m([32m'profiles'[39m)[0m
+
+Return statement is not allowed here
+
+
+
+./app/auth/actions.ts:65:1
+Parsing ecmascript source code failed
+[0m [90m 63 |[39m }
+ [90m 64 |[39m
+[31m[1m>[22m[39m[90m 65 |[39m [36mreturn[39m { success[33m:[39m [36mtrue[39m[33m,[39m redirectUrl[33m:[39m target }
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 66 |[39m }
+ [90m 67 |[39m
+ [90m 68 |[39m [36mexport[39m [36masync[39m [36mfunction[39m signup(formData[33m:[39m [33mFormData[39m) {[0m
+
+Return statement is not allowed here
+
+
+ GET /login 500 in 37ms (compile: 21ms, proxy.ts: 7ms, render: 9ms)
+ GET /login 200 in 154ms (compile: 58ms, proxy.ts: 1689µs, render: 94ms)
+ GET /login 200 in 155ms (compile: 94ms, proxy.ts: 955µs, render: 60ms)
+Skipping Supabase Auth (Demo Mode)
+ POST /login 200 in 42ms (compile: 6ms, proxy.ts: 7ms, render: 28ms)
+ GET /student/profile 200 in 168ms (compile: 155ms, proxy.ts: 2ms, render: 11ms)
+ GET /student/profile 200 in 11ms (compile: 1304µs, proxy.ts: 1343µs, render: 8ms)
+ GET /login 200 in 25ms (compile: 4ms, proxy.ts: 6ms, render: 15ms)
+Skipping Supabase Auth (Demo Mode)
+ POST /login 200 in 31ms (compile: 4ms, proxy.ts: 6ms, render: 21ms)
+ GET /recruiter/discover 200 in 189ms (compile: 178ms, proxy.ts: 2ms, render: 9ms)
+ GET /recruiter/discover 200 in 9ms (compile: 878µs, proxy.ts: 1132µs, render: 7ms)
+ GET /recruiter/candidate/demo-2 200 in 383ms (compile: 369ms, proxy.ts: 4ms, render: 10ms)
+ GET /login 200 in 17ms (compile: 2ms, proxy.ts: 1854µs, render: 13ms)
+ GET /login 200 in 8ms (compile: 1579µs, proxy.ts: 1562µs, render: 5ms)
+Skipping Supabase Auth (Demo Mode)
+ POST /login 200 in 30ms (compile: 4ms, proxy.ts: 5ms, render: 20ms)
+ GET /recruiter/discover 200 in 18ms (compile: 1990µs, proxy.ts: 3ms, render: 13ms)
+ GET /recruiter/discover 200 in 13ms (compile: 1345µs, proxy.ts: 1533µs, render: 10ms)
+ GET /recruiter/candidate/demo-2 200 in 41ms (compile: 18ms, proxy.ts: 6ms, render: 17ms)
+ GET /login 200 in 20ms (compile: 1670µs, proxy.ts: 1786µs, render: 16ms)
+ GET /login 200 in 10ms (compile: 1904µs, proxy.ts: 1465µs, render: 6ms)
+ GET /login 200 in 52ms (compile: 8ms, proxy.ts: 5ms, render: 40ms)
+ GET /login 200 in 47ms (compile: 6ms, proxy.ts: 5ms, render: 36ms)
+ GET /login 200 in 67ms (compile: 11ms, proxy.ts: 8ms, render: 48ms)
+ GET /login 200 in 60ms (compile: 27ms, proxy.ts: 5ms, render: 29ms)
+✓ Compiled in 56ms
+Skipping Supabase Auth (Demo Mode)
+ POST /login 200 in 32ms (compile: 4ms, proxy.ts: 5ms, render: 22ms)
+ GET /recruiter/discover 200 in 65ms (compile: 46ms, proxy.ts: 2ms, render: 16ms)
+ GET /recruiter/discover 200 in 21ms (compile: 2ms, proxy.ts: 9ms, render: 10ms)
+ GET /recruiter/candidate/seed-7 200 in 83ms (compile: 63ms, proxy.ts: 5ms, render: 15ms)
+ GET /login 200 in 21ms (compile: 3ms, proxy.ts: 1408µs, render: 17ms)
+ GET /login 200 in 10ms (compile: 1667µs, proxy.ts: 1719µs, render: 7ms)
+ GET /recruiter/discover 200 in 85ms (compile: 3ms, proxy.ts: 5ms, render: 77ms)
+ GET /recruiter/candidate/seed-6 200 in 18ms (compile: 3ms, proxy.ts: 3ms, render: 12ms)
+ GET /login 200 in 21ms (compile: 2ms, proxy.ts: 2ms, render: 16ms)
+ GET /login 200 in 11ms (compile: 1814µs, proxy.ts: 3ms, render: 7ms)
+ GET /recruiter/discover 200 in 24ms (compile: 1287µs, proxy.ts: 1395µs, render: 21ms)
+ GET /recruiter/discover 200 in 22ms (compile: 1205µs, proxy.ts: 1242µs, render: 20ms)
+ GET /recruiter/discover 200 in 52ms (compile: 27ms, proxy.ts: 1450µs, render: 24ms)
+ GET /login 200 in 10ms (compile: 1292µs, proxy.ts: 1429µs, render: 7ms)
+ GET /login 200 in 13ms (compile: 1960µs, proxy.ts: 3ms, render: 8ms)
+ GET /recruiter/discover 200 in 31ms (compile: 3ms, proxy.ts: 1982µs, render: 26ms)
+✓ Compiled in 43ms
+ GET /recruiter/discover 200 in 94ms (compile: 5ms, proxy.ts: 6ms, render: 83ms)
+ GET /recruiter/discover 200 in 69ms (compile: 4ms, proxy.ts: 7ms, render: 58ms)
+ GET /recruiter/discover 200 in 66ms (compile: 10ms, proxy.ts: 5ms, render: 50ms)
+ GET /login 200 in 60ms (compile: 1925µs, proxy.ts: 51ms, render: 7ms)
+ GET /recruiter/discover 200 in 65ms (compile: 39ms, proxy.ts: 3ms, render: 24ms)
+✓ Compiled in 13ms
+✓ Compiled in 13ms
+ GET /login 200 in 50ms (compile: 1035µs, proxy.ts: 1599µs, render: 48ms)
+ GET /recruiter/discover 200 in 56ms (compile: 32ms, proxy.ts: 2ms, render: 22ms)
+ GET /recruiter/discover 200 in 94ms (compile: 9ms, proxy.ts: 7ms, render: 78ms)
+✓ Compiled in 41ms
+ GET /login 200 in 18ms (compile: 12ms, proxy.ts: 942µs, render: 5ms)
+ GET /recruiter/discover 200 in 20ms (compile: 3ms, proxy.ts: 1358µs, render: 15ms)
+✓ Compiled in 10ms
+✓ Compiled in 30ms
+ GET /login 200 in 46ms (compile: 33ms, proxy.ts: 2ms, render: 10ms)
+ GET /recruiter/discover 200 in 52ms (compile: 7ms, proxy.ts: 4ms, render: 41ms)
+Error: Route "/recruiter/candidate/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at CandidateDetailPage (app/recruiter/candidate/[id]/page.tsx:25:26)
+  23 |     let profile, thinkingStyle, projects;
+  24 |
+> 25 |     if (isDemo && params.id.startsWith('seed-')) {
+     |                          ^
+  26 |         const index = parseInt(params.id.replace('seed-', ''))
+  27 |         const student = embaStudents[index] // Safe access usually, but could handle undefined
+  28 |
+⨯ TypeError: Cannot read properties of undefined (reading 'startsWith')
+    at CandidateDetailPage (app/recruiter/candidate/[id]/page.tsx:25:29)
+  23 |     let profile, thinkingStyle, projects;
+  24 |
+> 25 |     if (isDemo && params.id.startsWith('seed-')) {
+     |                             ^
+  26 |         const index = parseInt(params.id.replace('seed-', ''))
+  27 |         const student = embaStudents[index] // Safe access usually, but could handle undefined
+  28 | {
+  digest: '369992613'
+}
+ GET /recruiter/candidate/seed-0 200 in 154ms (compile: 90ms, proxy.ts: 5ms, render: 59ms)
+ GET /login 200 in 25ms (compile: 7ms, proxy.ts: 6ms, render: 13ms)
+ GET /recruiter/discover 200 in 79ms (compile: 6ms, proxy.ts: 10ms, render: 63ms)
+ GET /login 200 in 72ms (compile: 50ms, proxy.ts: 2ms, render: 20ms)
+ GET /login 200 in 69ms (compile: 8ms, proxy.ts: 48ms, render: 13ms)
+ GET /recruiter/discover 200 in 75ms (compile: 37ms, proxy.ts: 2ms, render: 35ms)
+ GET /recruiter/discover 200 in 15ms (compile: 6ms, proxy.ts: 1230µs, render: 8ms)
+ GET /recruiter/discover 200 in 94ms (compile: 5ms, proxy.ts: 5ms, render: 84ms)
+Error: Route "/recruiter/candidate/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at CandidateDetailPage (app/recruiter/candidate/[id]/page.tsx:25:26)
+  23 |     let profile, thinkingStyle, projects;
+  24 |
+> 25 |     if (isDemo && params.id.startsWith('seed-')) {
+     |                          ^
+  26 |         const index = parseInt(params.id.replace('seed-', ''))
+  27 |         const student = embaStudents[index] // Safe access usually, but could handle undefined
+  28 |
+⨯ TypeError: Cannot read properties of undefined (reading 'startsWith')
+    at CandidateDetailPage (app/recruiter/candidate/[id]/page.tsx:25:29)
+  23 |     let profile, thinkingStyle, projects;
+  24 |
+> 25 |     if (isDemo && params.id.startsWith('seed-')) {
+     |                             ^
+  26 |         const index = parseInt(params.id.replace('seed-', ''))
+  27 |         const student = embaStudents[index] // Safe access usually, but could handle undefined
+  28 | {
+  digest: '2793057184'
+}
+ GET /recruiter/candidate/seed-12 200 in 103ms (compile: 61ms, proxy.ts: 7ms, render: 34ms)
+Error: Route "/recruiter/candidate/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at CandidateDetailPage (app/recruiter/candidate/[id]/page.tsx:25:26)
+  23 |     let profile, thinkingStyle, projects;
+  24 |
+> 25 |     if (isDemo && params.id.startsWith('seed-')) {
+     |                          ^
+  26 |         const index = parseInt(params.id.replace('seed-', ''))
+  27 |         const student = embaStudents[index] // Safe access usually, but could handle undefined
+  28 |
+⨯ TypeError: Cannot read properties of undefined (reading 'startsWith')
+    at CandidateDetailPage (app/recruiter/candidate/[id]/page.tsx:25:29)
+  23 |     let profile, thinkingStyle, projects;
+  24 |
+> 25 |     if (isDemo && params.id.startsWith('seed-')) {
+     |                             ^
+  26 |         const index = parseInt(params.id.replace('seed-', ''))
+  27 |         const student = embaStudents[index] // Safe access usually, but could handle undefined
+  28 | {
+  digest: '1592628655'
+}
+ GET /recruiter/candidate/seed-12 500 in 74ms (compile: 10ms, proxy.ts: 5ms, render: 59ms)
+Error: Route "/recruiter/candidate/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at CandidateDetailPage (app/recruiter/candidate/[id]/page.tsx:25:26)
+  23 |     let profile, thinkingStyle, projects;
+  24 |
+> 25 |     if (isDemo && params.id.startsWith('seed-')) {
+     |                          ^
+  26 |         const index = parseInt(params.id.replace('seed-', ''))
+  27 |         const student = embaStudents[index] // Safe access usually, but could handle undefined
+  28 |
+⨯ TypeError: Cannot read properties of undefined (reading 'startsWith')
+    at CandidateDetailPage (app/recruiter/candidate/[id]/page.tsx:25:29)
+  23 |     let profile, thinkingStyle, projects;
+  24 |
+> 25 |     if (isDemo && params.id.startsWith('seed-')) {
+     |                             ^
+  26 |         const index = parseInt(params.id.replace('seed-', ''))
+  27 |         const student = embaStudents[index] // Safe access usually, but could handle undefined
+  28 | {
+  digest: '1592628655'
+}
+ GET /recruiter/candidate/seed-12 500 in 58ms (compile: 11ms, proxy.ts: 7ms, render: 40ms)
+ GET /recruiter/discover 200 in 35ms (compile: 8ms, proxy.ts: 5ms, render: 22ms)
+ GET /recruiter/discover 200 in 84ms (compile: 3ms, proxy.ts: 4ms, render: 77ms)
+ GET /recruiter/discover 200 in 39ms (compile: 3ms, proxy.ts: 3ms, render: 33ms)
+ GET /login 200 in 14ms (compile: 4ms, proxy.ts: 1537µs, render: 8ms)
+✓ Compiled in 36ms
+ GET /recruiter/discover 200 in 73ms (compile: 6ms, proxy.ts: 6ms, render: 61ms)
+Error: Route "/recruiter/candidate/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at CandidateDetailPage (app/recruiter/candidate/[id]/page.tsx:26:26)
+  24 |     let profile, thinkingStyle, projects;
+  25 |
+> 26 |     if (isDemo && params.id.startsWith('seed-')) {
+     |                          ^
+  27 |         const index = parseInt(params.id.replace('seed-', ''))
+  28 |         const student = embaStudents[index] // Safe access usually, but could handle undefined
+  29 |
+⨯ TypeError: Cannot read properties of undefined (reading 'startsWith')
+    at CandidateDetailPage (app/recruiter/candidate/[id]/page.tsx:26:29)
+  24 |     let profile, thinkingStyle, projects;
+  25 |
+> 26 |     if (isDemo && params.id.startsWith('seed-')) {
+     |                             ^
+  27 |         const index = parseInt(params.id.replace('seed-', ''))
+  28 |         const student = embaStudents[index] // Safe access usually, but could handle undefined
+  29 | {
+  digest: '1256476801'
+}
+ GET /recruiter/candidate/seed-1 200 in 135ms (compile: 67ms, proxy.ts: 6ms, render: 61ms)
+ GET /recruiter/discover 200 in 26ms (compile: 1011µs, proxy.ts: 1450µs, render: 24ms)
+ GET /login 200 in 64ms (compile: 5ms, proxy.ts: 40ms, render: 19ms)
+ GET /login 200 in 22ms (compile: 14ms, proxy.ts: 1201µs, render: 7ms)
+ GET /recruiter/discover 200 in 71ms (compile: 32ms, proxy.ts: 1921µs, render: 37ms)
+ GET /recruiter/discover 200 in 25ms (compile: 8ms, proxy.ts: 1809µs, render: 15ms)
+ GET /recruiter/discover 200 in 25ms (compile: 1532µs, proxy.ts: 1407µs, render: 22ms)
+ GET /login 200 in 13ms (compile: 1114µs, proxy.ts: 1273µs, render: 10ms)
+✓ Compiled in 26ms
+⨯ ./app/recruiter/discover/page.tsx:18:5
+Parsing ecmascript source code failed
+[0m [90m 16 |[39m     } [33m=[39m [36mawait[39m supabase[33m.[39mauth[33m.[39mgetUser()
+ [90m 17 |[39m
+[31m[1m>[22m[39m[90m 18 |[39m     [36mimport[39m { getDomainFromProfile } [36mfrom[39m [32m'@/lib/domain-mapper'[39m
+ [90m    |[39m     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 19 |[39m
+ [90m 20 |[39m     [90m// ...[39m
+ [90m 21 |[39m[0m
+
+'import', and 'export' cannot be used outside of module code
+
+
+ GET /recruiter/discover 500 in 43ms (compile: 25ms, proxy.ts: 4ms, render: 13ms)
+⨯ ./app/recruiter/discover/page.tsx:18:5
+Parsing ecmascript source code failed
+[0m [90m 16 |[39m     } [33m=[39m [36mawait[39m supabase[33m.[39mauth[33m.[39mgetUser()
+ [90m 17 |[39m
+[31m[1m>[22m[39m[90m 18 |[39m     [36mimport[39m { getDomainFromProfile } [36mfrom[39m [32m'@/lib/domain-mapper'[39m
+ [90m    |[39m     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 19 |[39m
+ [90m 20 |[39m     [90m// ...[39m
+ [90m 21 |[39m[0m
+
+'import', and 'export' cannot be used outside of module code
+
+
+ GET /recruiter/discover 500 in 28ms (compile: 14ms, proxy.ts: 5ms, render: 8ms)
+✓ Compiled in 58ms
+ GET /login 404 in 155ms (compile: 84ms, proxy.ts: 1854µs, render: 69ms)
+ GET /login 200 in 151ms (compile: 3ms, proxy.ts: 1146µs, render: 146ms)
+ GET /login 200 in 21ms (compile: 3ms, proxy.ts: 3ms, render: 15ms)
+ GET /recruiter/discover 200 in 187ms (compile: 35ms, proxy.ts: 992µs, render: 151ms)
+ GET /recruiter/discover 200 in 88ms (compile: 4ms, proxy.ts: 5ms, render: 79ms)
+ GET /recruiter/candidate/seed-1 200 in 112ms (compile: 81ms, proxy.ts: 7ms, render: 24ms)
+ GET /recruiter/discover 200 in 38ms (compile: 5ms, proxy.ts: 5ms, render: 28ms)
+ GET /recruiter/candidate/seed-31 200 in 35ms (compile: 9ms, proxy.ts: 5ms, render: 20ms)
+ GET /recruiter/discover 200 in 30ms (compile: 5ms, proxy.ts: 4ms, render: 21ms)
+✓ Compiled in 25ms
+ GET /recruiter/discover 200 in 14ms (compile: 1927µs, proxy.ts: 1461µs, render: 11ms)
+✓ Compiled in 57ms
+ GET /recruiter/discover 200 in 14ms (compile: 1187µs, proxy.ts: 1745µs, render: 11ms)
+✓ Compiled in 48ms
+ GET / 307 in 115ms (compile: 54ms, proxy.ts: 5ms, render: 56ms)
+ GET /recruiter/discover 200 in 69ms (compile: 8ms, proxy.ts: 1456µs, render: 59ms)
+ GET /login 200 in 31ms (compile: 4ms, proxy.ts: 3ms, render: 24ms)
+ GET /login 200 in 13ms (compile: 1302µs, proxy.ts: 1688µs, render: 10ms)
+ GET / 307 in 34ms (compile: 4ms, proxy.ts: 4ms, render: 26ms)
+ GET /login 200 in 19ms (compile: 1066µs, proxy.ts: 1270µs, render: 17ms)
+ GET /login 200 in 22ms (compile: 2ms, proxy.ts: 1285µs, render: 19ms)
+ GET /recruiter/discover 200 in 67ms (compile: 30ms, proxy.ts: 1406µs, render: 36ms)
+ GET /login 200 in 22ms (compile: 8ms, proxy.ts: 960µs, render: 14ms)
+ GET /recruiter/discover 200 in 22ms (compile: 12ms, proxy.ts: 1294µs, render: 9ms)
+ GET /login 200 in 8ms (compile: 965µs, proxy.ts: 1230µs, render: 6ms)
+ GET /recruiter/discover 200 in 21ms (compile: 1229µs, proxy.ts: 1545µs, render: 18ms)
+✓ Compiled in 17ms
+ GET / 307 in 154ms (compile: 5ms, proxy.ts: 4ms, render: 145ms)
+ GET /recruiter/discover 200 in 122ms (compile: 3ms, proxy.ts: 1385µs, render: 118ms)
+ GET / 307 in 121ms (compile: 7ms, proxy.ts: 7ms, render: 107ms)
+ GET /recruiter/discover 200 in 75ms (compile: 5ms, proxy.ts: 2ms, render: 68ms)
+ GET /recruiter/candidate/seed-49 200 in 111ms (compile: 83ms, proxy.ts: 7ms, render: 22ms)
+ GET /recruiter/candidate/seed-19 200 in 75ms (compile: 10ms, proxy.ts: 7ms, render: 59ms)
+✓ Compiled in 70ms
+✓ Compiled in 48ms
+✓ Compiled in 39ms
+ GET /login 200 in 174ms (compile: 62ms, proxy.ts: 55ms, render: 57ms)
+ GET /login 200 in 116ms (compile: 76ms, proxy.ts: 2ms, render: 38ms)
+ GET /recruiter/discover 200 in 204ms (compile: 8ms, proxy.ts: 24ms, render: 172ms)
+ GET /recruiter/discover 200 in 115ms (compile: 19ms, proxy.ts: 70ms, render: 26ms)
+ GET /recruiter/candidate/seed-19 200 in 203ms (compile: 113ms, proxy.ts: 13ms, render: 77ms)
+ GET /recruiter/candidate/seed-19 200 in 32ms (compile: 12ms, proxy.ts: 4ms, render: 16ms)
+ GET /recruiter/discover 200 in 29ms (compile: 3ms, proxy.ts: 11ms, render: 16ms)
+ GET / 307 in 119ms (compile: 8ms, proxy.ts: 6ms, render: 104ms)
+ GET /recruiter/discover 200 in 75ms (compile: 1755µs, proxy.ts: 1717µs, render: 72ms)
+ GET /recruiter/candidate/seed-10 200 in 37ms (compile: 9ms, proxy.ts: 6ms, render: 21ms)
+ GET /recruiter/candidate/seed-4 200 in 40ms (compile: 9ms, proxy.ts: 5ms, render: 27ms)
+ GET /recruiter/candidate/seed-15 200 in 35ms (compile: 10ms, proxy.ts: 5ms, render: 20ms)
+ GET / 307 in 30ms (compile: 4ms, proxy.ts: 3ms, render: 23ms)
+ GET /login 200 in 20ms (compile: 1321µs, proxy.ts: 1220µs, render: 17ms)
+✓ Compiled in 14ms
+ GET / 307 in 61ms (compile: 3ms, proxy.ts: 38ms, render: 19ms)
+ GET /recruiter/discover 200 in 74ms (compile: 2ms, proxy.ts: 1465µs, render: 71ms)
+✓ Compiled in 47ms
+ GET /recruiter/candidate/seed-0 200 in 38ms (compile: 12ms, proxy.ts: 5ms, render: 21ms)
+ GET /recruiter/discover 200 in 39ms (compile: 3ms, proxy.ts: 4ms, render: 32ms)
+ GET /recruiter/discover 200 in 41ms (compile: 15ms, proxy.ts: 4ms, render: 22ms)
+ GET /recruiter/discover 200 in 11ms (compile: 1041µs, proxy.ts: 1458µs, render: 9ms)
+✓ Compiled in 18ms
+ GET /recruiter/discover 200 in 149ms (compile: 36ms, proxy.ts: 2ms, render: 111ms)
+ GET /recruiter/discover 200 in 149ms (compile: 52ms, proxy.ts: 2ms, render: 95ms)
+ GET /recruiter/discover 200 in 146ms (compile: 18ms, proxy.ts: 50ms, render: 77ms)
+ GET /recruiter/discover 200 in 87ms (compile: 17ms, proxy.ts: 6ms, render: 64ms)
+ GET /recruiter/discover 200 in 31ms (compile: 3ms, proxy.ts: 1421µs, render: 26ms)
+ GET /recruiter/discover 200 in 16ms (compile: 1567µs, proxy.ts: 1516µs, render: 13ms)
+ GET /recruiter/discover 200 in 135ms (compile: 10ms, proxy.ts: 6ms, render: 119ms)
+ GET / 307 in 37ms (compile: 11ms, proxy.ts: 3ms, render: 22ms)
+ GET /recruiter/discover 200 in 84ms (compile: 1569µs, proxy.ts: 2ms, render: 80ms)
+ GET /recruiter/candidate/seed-19 200 in 107ms (compile: 65ms, proxy.ts: 7ms, render: 35ms)
+ GET /recruiter/discover 200 in 106ms (compile: 5ms, proxy.ts: 7ms, render: 94ms)
+ GET /recruiter/discover 200 in 82ms (compile: 60ms, proxy.ts: 5ms, render: 16ms)
+ GET /recruiter/candidate/seed-19 200 in 110ms (compile: 60ms, proxy.ts: 6ms, render: 44ms)
+ GET /recruiter/discover 200 in 35ms (compile: 4ms, proxy.ts: 4ms, render: 28ms)
+ GET /recruiter/candidate/seed-0 200 in 35ms (compile: 11ms, proxy.ts: 5ms, render: 19ms)
+ GET /recruiter/candidate/seed-0 200 in 35ms (compile: 9ms, proxy.ts: 5ms, render: 21ms)
+ GET /recruiter/candidate/seed-30 200 in 35ms (compile: 9ms, proxy.ts: 5ms, render: 21ms)
+ GET /recruiter/candidate/seed-5 200 in 41ms (compile: 9ms, proxy.ts: 5ms, render: 27ms)
+ GET /recruiter/candidate/seed-1 200 in 36ms (compile: 12ms, proxy.ts: 6ms, render: 18ms)
+ GET /recruiter/candidate/seed-4 200 in 35ms (compile: 8ms, proxy.ts: 5ms, render: 22ms)
+ GET /recruiter/candidate/seed-3 200 in 36ms (compile: 13ms, proxy.ts: 5ms, render: 18ms)
+ GET /recruiter/discover 200 in 81ms (compile: 968µs, proxy.ts: 1271µs, render: 79ms)
+ GET /recruiter/discover 200 in 76ms (compile: 1687µs, proxy.ts: 793µs, render: 73ms)
+ GET /recruiter/candidate/seed-3 200 in 80ms (compile: 45ms, proxy.ts: 1172µs, render: 35ms)
+⨯ TypeError: Cannot read properties of undefined (reading 'title')
+    at TransformationArc (components/student/transformation-arc.tsx:31:112)
+  29 |                     <div className="flex-1 text-center md:text-left p-4 bg-white dark:bg-slate-900 rounded-lg border border-slate-100 dark:border-slate-800 shadow-sm w-full">
+  30 |                         <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Origin</div>
+> 31 |                         <h4 className="font-bold text-slate-700 dark:text-slate-300 text-lg mb-2">{data.before.title}</h4>
+     |                                                                                                                ^
+  32 |                         <p className="text-sm text-slate-500">{data.before.desc}</p>
+  33 |                     </div>
+  34 | {
+  digest: '2431270420'
+}
+ GET /recruiter/discover 200 in 202ms (compile: 2ms, proxy.ts: 1813µs, render: 198ms)
+ GET /recruiter/discover 200 in 197ms (compile: 1008µs, proxy.ts: 756µs, render: 196ms)
+ GET /recruiter/candidate/seed-3 500 in 210ms (compile: 62ms, proxy.ts: 985µs, render: 147ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 57ms
+ GET /recruiter/candidate/seed-3 200 in 98ms (compile: 47ms, proxy.ts: 1804µs, render: 49ms)
+ GET /login 200 in 33ms (compile: 8ms, proxy.ts: 5ms, render: 20ms)
+ GET /login 200 in 61ms (compile: 7ms, proxy.ts: 3ms, render: 51ms)
+ GET /login 200 in 58ms (compile: 18ms, proxy.ts: 1886µs, render: 38ms)
+ GET /login 200 in 42ms (compile: 13ms, proxy.ts: 1789µs, render: 27ms)
+ GET /login 200 in 31ms (compile: 10ms, proxy.ts: 3ms, render: 18ms)
+ GET /login 200 in 30ms (compile: 9ms, proxy.ts: 9ms, render: 11ms)
+ GET /recruiter/candidate/seed-3 200 in 59ms (compile: 10ms, proxy.ts: 5ms, render: 45ms)
+ GET /recruiter/discover 200 in 32ms (compile: 5ms, proxy.ts: 4ms, render: 23ms)
+ GET /recruiter/candidate/seed-0 200 in 38ms (compile: 10ms, proxy.ts: 5ms, render: 23ms)
+ GET /recruiter/candidate/seed-1 200 in 38ms (compile: 12ms, proxy.ts: 5ms, render: 21ms)
+ GET /recruiter/candidate/seed-4 200 in 39ms (compile: 11ms, proxy.ts: 4ms, render: 23ms)
+ GET /recruiter/candidate/seed-5 200 in 37ms (compile: 10ms, proxy.ts: 5ms, render: 22ms)
+ GET /recruiter/discover 200 in 136ms (compile: 2ms, proxy.ts: 1750µs, render: 132ms)
+ GET /recruiter/discover 200 in 120ms (compile: 1457µs, proxy.ts: 992µs, render: 118ms)
+ GET /recruiter/candidate/seed-5 200 in 123ms (compile: 98ms, proxy.ts: 1423µs, render: 24ms)
+ GET /recruiter/discover 200 in 112ms (compile: 2ms, proxy.ts: 1360µs, render: 108ms)
+ GET /recruiter/discover 200 in 101ms (compile: 1171µs, proxy.ts: 825µs, render: 99ms)
+ GET /recruiter/candidate/seed-5 200 in 105ms (compile: 68ms, proxy.ts: 1107µs, render: 35ms)
+ GET /recruiter/candidate/seed-5 200 in 144ms (compile: 9ms, proxy.ts: 9ms, render: 126ms)
+ GET /recruiter/discover 200 in 30ms (compile: 8ms, proxy.ts: 3ms, render: 19ms)
+ GET /recruiter/candidate/seed-0 200 in 35ms (compile: 11ms, proxy.ts: 5ms, render: 19ms)
+✓ Compiled in 35ms
+ GET /recruiter/discover 200 in 38ms (compile: 2ms, proxy.ts: 4ms, render: 32ms)
+ GET /recruiter/discover 200 in 22ms (compile: 3ms, proxy.ts: 1281µs, render: 17ms)
+ GET /recruiter/discover 200 in 21ms (compile: 10ms, proxy.ts: 1198µs, render: 10ms)
+✓ Compiled in 27ms
+✓ Compiled in 242ms
+ GET /recruiter/discover 200 in 99ms (compile: 5ms, proxy.ts: 1334µs, render: 93ms)
+ GET /recruiter/discover 200 in 86ms (compile: 2ms, proxy.ts: 1318µs, render: 83ms)
+ GET /recruiter/discover 200 in 88ms (compile: 9ms, proxy.ts: 1008µs, render: 77ms)
+ GET /recruiter/discover 200 in 82ms (compile: 4ms, proxy.ts: 2ms, render: 76ms)
+ GET /recruiter/candidate/seed-0 200 in 116ms (compile: 90ms, proxy.ts: 5ms, render: 20ms)
+ GET /recruiter/candidate/seed-1 200 in 36ms (compile: 13ms, proxy.ts: 5ms, render: 17ms)
+ GET /recruiter/candidate/seed-2 200 in 35ms (compile: 12ms, proxy.ts: 5ms, render: 18ms)
+ GET /recruiter/candidate/seed-16 200 in 31ms (compile: 8ms, proxy.ts: 4ms, render: 19ms)
+ GET /recruiter/candidate/seed-6 200 in 36ms (compile: 10ms, proxy.ts: 6ms, render: 20ms)
+✓ Compiled in 26ms
+ GET /recruiter/candidate/seed-10 200 in 25ms (compile: 6ms, proxy.ts: 2ms, render: 17ms)
+ GET /recruiter/candidate/seed-24 200 in 42ms (compile: 16ms, proxy.ts: 5ms, render: 21ms)
+ GET /recruiter/candidate/seed-1 200 in 36ms (compile: 11ms, proxy.ts: 4ms, render: 21ms)
+ GET /recruiter/candidate/seed-2 200 in 38ms (compile: 13ms, proxy.ts: 5ms, render: 21ms)
+ GET /recruiter/candidate/seed-40 200 in 38ms (compile: 11ms, proxy.ts: 4ms, render: 23ms)
+ GET /recruiter/candidate/seed-0 200 in 36ms (compile: 12ms, proxy.ts: 4ms, render: 20ms)
+ GET /recruiter/candidate/seed-10 200 in 37ms (compile: 11ms, proxy.ts: 5ms, render: 21ms)
+ GET /recruiter/candidate/seed-16 200 in 38ms (compile: 12ms, proxy.ts: 5ms, render: 21ms)
+ GET /recruiter/candidate/seed-10 200 in 39ms (compile: 13ms, proxy.ts: 5ms, render: 21ms)
+ GET /login 200 in 26ms (compile: 4ms, proxy.ts: 4ms, render: 18ms)
+ GET /login 200 in 32ms (compile: 17ms, proxy.ts: 7ms, render: 8ms)
+ GET /login 200 in 19ms (compile: 3ms, proxy.ts: 2ms, render: 13ms)
+ GET /login 200 in 17ms (compile: 8ms, proxy.ts: 1976µs, render: 7ms)
+ GET / 307 in 45ms (compile: 5ms, proxy.ts: 5ms, render: 34ms)
+ GET /recruiter/discover 200 in 101ms (compile: 3ms, proxy.ts: 1464µs, render: 97ms)
+ GET /recruiter/candidate/seed-22 200 in 44ms (compile: 15ms, proxy.ts: 7ms, render: 21ms)
+ GET /recruiter/candidate/seed-0 200 in 38ms (compile: 11ms, proxy.ts: 4ms, render: 23ms)
+ GET /recruiter/discover 200 in 47ms (compile: 3ms, proxy.ts: 2ms, render: 41ms)
+ GET /login 200 in 30ms (compile: 19ms, proxy.ts: 971µs, render: 10ms)
+ GET /recruiter/discover 200 in 33ms (compile: 3ms, proxy.ts: 1161µs, render: 29ms)
+ GET /recruiter/discover 200 in 32ms (compile: 10ms, proxy.ts: 905µs, render: 21ms)
+✓ Compiled in 50ms
+ GET /recruiter/discover 200 in 99ms (compile: 5ms, proxy.ts: 5ms, render: 89ms)
+✓ Compiled in 81ms
+⨯ ./components/recruiter/candidate-filter.tsx:10:1
+Ecmascript file had an error
+[0m [90m  8 |[39m [36mimport[39m { [33mSwitch[39m } [36mfrom[39m [32m'@/components/ui/switch'[39m
+ [90m  9 |[39m
+[31m[1m>[22m[39m[90m 10 |[39m [32m'use client'[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 11 |[39m
+ [90m 12 |[39m [36mimport[39m { useRouter[33m,[39m useSearchParams } [36mfrom[39m [32m'next/navigation'[39m
+ [90m 13 |[39m [36mimport[39m { useCallback[33m,[39m useState } [36mfrom[39m [32m'react'[39m[0m
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+Import trace:
+  Server Component:
+    ./components/recruiter/candidate-filter.tsx
+    ./app/recruiter/discover/page.tsx
+
+
+
+./components/recruiter/candidate-filter.tsx:16:10
+Ecmascript file had an error
+[0m [90m 14 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m'@/components/ui/button'[39m
+ [90m 15 |[39m [36mimport[39m { [33mLabel[39m } [36mfrom[39m [32m'@/components/ui/label'[39m
+[31m[1m>[22m[39m[90m 16 |[39m [36mimport[39m { [33mBadge[39m } [36mfrom[39m [32m'@/components/ui/badge'[39m
+ [90m    |[39m          [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 17 |[39m [36mimport[39m { [33mSwitch[39m } [36mfrom[39m [32m'@/components/ui/switch'[39m
+ [90m 18 |[39m [36mimport[39m { [33mSlider[39m } [36mfrom[39m [32m'@/components/ui/slider'[39m
+ [90m 19 |[39m[0m
+
+the name `Badge` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/recruiter/candidate-filter.tsx
+    ./app/recruiter/discover/page.tsx
+
+
+
+./components/recruiter/candidate-filter.tsx:14:10
+Ecmascript file had an error
+[0m [90m 12 |[39m [36mimport[39m { useRouter[33m,[39m useSearchParams } [36mfrom[39m [32m'next/navigation'[39m
+ [90m 13 |[39m [36mimport[39m { useCallback[33m,[39m useState } [36mfrom[39m [32m'react'[39m
+[31m[1m>[22m[39m[90m 14 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m'@/components/ui/button'[39m
+ [90m    |[39m          [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 15 |[39m [36mimport[39m { [33mLabel[39m } [36mfrom[39m [32m'@/components/ui/label'[39m
+ [90m 16 |[39m [36mimport[39m { [33mBadge[39m } [36mfrom[39m [32m'@/components/ui/badge'[39m
+ [90m 17 |[39m [36mimport[39m { [33mSwitch[39m } [36mfrom[39m [32m'@/components/ui/switch'[39m[0m
+
+the name `Button` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/recruiter/candidate-filter.tsx
+    ./app/recruiter/discover/page.tsx
+
+
+
+./components/recruiter/candidate-filter.tsx:15:10
+Ecmascript file had an error
+[0m [90m 13 |[39m [36mimport[39m { useCallback[33m,[39m useState } [36mfrom[39m [32m'react'[39m
+ [90m 14 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m'@/components/ui/button'[39m
+[31m[1m>[22m[39m[90m 15 |[39m [36mimport[39m { [33mLabel[39m } [36mfrom[39m [32m'@/components/ui/label'[39m
+ [90m    |[39m          [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 16 |[39m [36mimport[39m { [33mBadge[39m } [36mfrom[39m [32m'@/components/ui/badge'[39m
+ [90m 17 |[39m [36mimport[39m { [33mSwitch[39m } [36mfrom[39m [32m'@/components/ui/switch'[39m
+ [90m 18 |[39m [36mimport[39m { [33mSlider[39m } [36mfrom[39m [32m'@/components/ui/slider'[39m[0m
+
+the name `Label` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/recruiter/candidate-filter.tsx
+    ./app/recruiter/discover/page.tsx
+
+
+
+./components/recruiter/candidate-filter.tsx:17:10
+Ecmascript file had an error
+[0m [90m 15 |[39m [36mimport[39m { [33mLabel[39m } [36mfrom[39m [32m'@/components/ui/label'[39m
+ [90m 16 |[39m [36mimport[39m { [33mBadge[39m } [36mfrom[39m [32m'@/components/ui/badge'[39m
+[31m[1m>[22m[39m[90m 17 |[39m [36mimport[39m { [33mSwitch[39m } [36mfrom[39m [32m'@/components/ui/switch'[39m
+ [90m    |[39m          [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 18 |[39m [36mimport[39m { [33mSlider[39m } [36mfrom[39m [32m'@/components/ui/slider'[39m
+ [90m 19 |[39m
+ [90m 20 |[39m [36mexport[39m [36mfunction[39m [33mCandidateFilter[39m() {[0m
+
+the name `Switch` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/recruiter/candidate-filter.tsx
+    ./app/recruiter/discover/page.tsx
+
+
+ GET /recruiter/discover 500 in 37ms (compile: 23ms, proxy.ts: 5ms, render: 9ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /login 200 in 198ms (compile: 2ms, proxy.ts: 1639µs, render: 194ms)
+ GET /recruiter/discover 200 in 204ms (compile: 76ms, proxy.ts: 3ms, render: 125ms)
+ GET /recruiter/discover 200 in 143ms (compile: 47ms, proxy.ts: 815µs, render: 96ms)
+ GET /recruiter/discover 200 in 153ms (compile: 1857µs, proxy.ts: 1224µs, render: 150ms)
+ GET /recruiter/discover?domain=Consulting 200 in 21ms (compile: 2ms, proxy.ts: 3ms, render: 16ms)
+ GET /recruiter/discover 200 in 28ms (compile: 4ms, proxy.ts: 4ms, render: 20ms)
+ GET /recruiter/discover?domain=Manufacturing 200 in 29ms (compile: 4ms, proxy.ts: 5ms, render: 20ms)
+ GET /recruiter/discover?domain=Technology 200 in 34ms (compile: 5ms, proxy.ts: 5ms, render: 24ms)
+ GET /recruiter/discover 200 in 29ms (compile: 4ms, proxy.ts: 5ms, render: 19ms)
+ GET /recruiter/discover?style=Intuitive 200 in 35ms (compile: 5ms, proxy.ts: 6ms, render: 25ms)
+ GET /recruiter/discover 200 in 32ms (compile: 5ms, proxy.ts: 6ms, render: 21ms)
+ GET /recruiter/discover?available=true 200 in 32ms (compile: 4ms, proxy.ts: 4ms, render: 24ms)
+ GET /recruiter/discover 200 in 28ms (compile: 5ms, proxy.ts: 4ms, render: 18ms)
+ GET /recruiter/discover 200 in 101ms (compile: 56ms, proxy.ts: 1311µs, render: 43ms)
+ GET /recruiter/discover 200 in 99ms (compile: 73ms, proxy.ts: 1332µs, render: 24ms)
+ GET /recruiter/discover 404 in 26ms (compile: 19ms, proxy.ts: 783µs, render: 6ms)
+ GET /login 404 in 28ms (compile: 14ms, proxy.ts: 1640µs, render: 13ms)
+ GET /login 200 in 122ms (compile: 57ms, proxy.ts: 30ms, render: 35ms)
+ GET /recruiter/discover 200 in 173ms (compile: 1241µs, proxy.ts: 1177µs, render: 170ms)
+ GET /recruiter/discover 200 in 103ms (compile: 11ms, proxy.ts: 7ms, render: 85ms)
+ GET /recruiter/candidate/seed-2 200 in 41ms (compile: 15ms, proxy.ts: 5ms, render: 21ms)
