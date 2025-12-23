@@ -3,6 +3,7 @@ import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import { CandidateFilter } from '@/components/recruiter/candidate-filter'
 import { CandidateGrid } from '@/components/recruiter/candidate-grid'
+import { SearchToolbar } from '@/components/recruiter/search-toolbar'
 // import { embaStudents } from '@/lib/data/seeds' // REMOVED
 import { getDomainFromProfile } from '@/lib/domain-mapper'
 
@@ -79,6 +80,16 @@ export default async function RecruiterDiscoverPage({
         candidates = candidates.filter(c => c.thinking_styles?.[0]?.risk_appetite >= minRisk)
     }
 
+    // 4. Text Search (In-Memory) - "The Power Search"
+    const queryTerm = (pendingParams.q as string)?.toLowerCase()
+    if (queryTerm) {
+        candidates = candidates.filter(c =>
+            c.full_name?.toLowerCase().includes(queryTerm) ||
+            c.headline?.toLowerCase().includes(queryTerm) ||
+            c.bio?.toLowerCase().includes(queryTerm)
+        )
+    }
+
     // 4. Style Filter (In-Memory) is tricky without mapping, skipping for MVP stability.
 
     return (
@@ -98,6 +109,9 @@ export default async function RecruiterDiscoverPage({
                             <p className="text-slate-500 mt-2 text-lg">
                                 Curated profiles from the <span className="font-semibold text-slate-900">Class of 2027</span>.
                             </p>
+                        </div>
+                        <div className="hidden md:block">
+                            <SearchToolbar />
                         </div>
                     </div>
 

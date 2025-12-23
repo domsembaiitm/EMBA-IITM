@@ -1,8 +1,6 @@
-'use client'
-
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Database } from '@/types/supabase'
-import { Progress } from '@/components/ui/progress' // Need to verify if I installed Progress? I missed it in the command. I'll use a simple HTML div if not.
+import { StrategyMatrix } from './strategy-matrix'
 
 type ThinkingStyle = Database['public']['Tables']['thinking_styles']['Row']
 
@@ -20,28 +18,21 @@ export function ThinkingStyleSection({ thinkingStyle, profileId }: { thinkingSty
                 <CardDescription>My decision-making DNA</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-                <div className="space-y-2">
-                    <div className="flex justify-between text-xs font-semibold text-slate-500 uppercase tracking-wider">
-                        <span>Conservative</span>
-                        <span>Risk Agnostic</span>
-                        <span>Risk Taker</span>
-                    </div>
-                    <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
-                        <div className="h-full bg-blue-600 transition-all" style={{ width: `${risk * 10}%` }}></div>
-                    </div>
-                    <p className="text-xs text-right text-slate-400">Risk Appetite: {risk}/10</p>
+
+                {/* The Matrix */}
+                <div className="border border-slate-100 bg-white rounded-lg p-2 shadow-sm">
+                    <StrategyMatrix risk={risk} leadership={leadership} />
                 </div>
 
-                <div className="space-y-2">
-                    <div className="flex justify-between text-xs font-semibold text-slate-500 uppercase tracking-wider">
-                        <span>Consensus</span>
-                        <span>Balanced</span>
-                        <span>Directive</span>
+                <div className="flex justify-between text-xs text-slate-500 px-2">
+                    <div className="text-center">
+                        <div className="font-bold text-slate-900">{risk}/10</div>
+                        <div>Risk</div>
                     </div>
-                    <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
-                        <div className="h-full bg-indigo-600 transition-all" style={{ width: `${leadership * 10}%` }}></div>
+                    <div className="text-center">
+                        <div className="font-bold text-slate-900">{leadership}/10</div>
+                        <div>Leadership</div>
                     </div>
-                    <p className="text-xs text-right text-slate-400">Leadership: {leadership}/10</p>
                 </div>
 
                 <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-800">
