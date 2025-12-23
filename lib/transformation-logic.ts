@@ -1,9 +1,29 @@
 
 import { embaCurriculum } from '@/lib/data/curriculum'
 
-// 1. ARCHETYPE DEFINITIONS
+// 1. TYPE DEFINITIONS
+export interface LevelDetail {
+    title: string;
+    rationale: string;
+}
+
+export interface Archetype {
+    keywords: string[];
+    domain: string;
+    focus: string;
+    courses: string[];
+    quote: string;
+    color: string;
+    levels: {
+        senior: LevelDetail;
+        mid: LevelDetail;
+        junior: LevelDetail;
+    };
+}
+
+// 2. ARCHETYPE DEFINITIONS
 // Refined mapping of Keywords -> Specific Titles & Specialized Courses
-const ARCHETYPES = [
+const ARCHETYPES: Archetype[] = [
     // 1. HIGH SPECIFICITY DOMAINS (Match these first to avoid generic traps)
     {
         keywords: ['real estate', 'infra', 'leasing', 'construction', 'civil', 'dlf', 'pn & co'],
@@ -194,7 +214,8 @@ const ARCHETYPES = [
 ]
 
 // Fallback for No Match
-const DEFAULT_ARCHETYPE = {
+const DEFAULT_ARCHETYPE: Archetype = {
+    keywords: [], // Empty keywords for fallback
     domain: 'General Management',
     focus: 'Cross-Functional Synergy',
     courses: ['MS9331', 'MS9352', 'MS9351', 'MS9731'], // Strat Planning, Global Biz, Biz Law, Issues Project

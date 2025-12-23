@@ -16,7 +16,12 @@ export async function updateProfile(formData: FormData) {
     const organization = formData.get('organization') as string
     const location = formData.get('location') as string
     const linkedinUrl = formData.get('linkedin_url') as string
+    const workExperience = parseInt(formData.get('work_experience') as string) || 0
     const isOpenToWork = formData.get('is_open_to_work') === 'on'
+
+    // Calculate Transformation
+    const { getTransformationNarrative } = await import('@/lib/transformation-logic')
+    const narrative = getTransformationNarrative(headline, organization, workExperience)
 
     // Avatar Upload Logic
     const avatarFile = formData.get('avatar') as File
@@ -96,6 +101,8 @@ export async function updateProfile(formData: FormData) {
         location: location,
         linkedin_url: linkedinUrl,
         is_open_to_work: isOpenToWork,
+        work_experience: workExperience,
+        domain: narrative.identity.domain,
         updated_at: new Date().toISOString()
     }
 
@@ -116,3 +123,43 @@ export async function updateProfile(formData: FormData) {
     revalidatePath('/student/profile')
     redirect('/student/profile')
 }
+
+// 4. Project Management Actions
+export async function addProject(formData: FormData) {
+    const supabase = await createClient()
+    const { data: { user } } = await supabase.auth.getUser()
+    if (!user) return { error: 'Unauthorized' }
+
+    const title = formData.get('title') as string
+    const role = formData.get('role_played') as string
+    const outcome = formData.get('solution_outcome') as string
+    const url = formData.get('artifact_url') as string
+
+    if (!title || !role) {
+        return { error: 'Title and Role are required' }
+    }
+
+    const { error } = await supabase.from('projects').insert({
+        profile_id: user.id,
+        title,
+        role_played: role,
+        solution_outcome: outcome,
+        artifact_urls: url ? [url] : []
+    })
+
+    if (error) return { error: error.message }
+    revalidatePath('/student/profile')
+    return { success: true }
+}
+
+export async function deleteProject(projectId: string) {
+    const supabase = await createClient()
+    const { data: { user } } = await supabase.auth.getUser()
+    if (!user) return { error: 'Unauthorized' }
+
+    const { error } = await supabase.from('projects').delete().match({ id: projectId, profile_id: user.id })
+    if (error) return { error: error.message }
+    revalidatePath('/student/profile')
+    return { success: true }
+}
+

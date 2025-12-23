@@ -13,6 +13,8 @@ import { cookies } from 'next/headers'
 import { OutreachDialog } from '@/components/recruiter/outreach-dialog'
 import { getTransformationNarrative } from '@/lib/transformation-logic'
 import { resolveAvatarUrl } from '@/lib/image-helper'
+import { ConnectButton } from '@/components/recruiter/connect-button'
+import { ShareProfile } from '@/components/recruiter/share-profile'
 
 export default async function CandidateDetailPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params
@@ -29,6 +31,18 @@ export default async function CandidateDetailPage({ params }: { params: Promise<
     // 3. Fetch Projects
     // Explicitly select columns to ensure type compatibility if needed, but select * is fine if types match
     const { data: projects } = await supabase.from('projects').select('*').eq('profile_id', id).order('created_at', { ascending: false })
+
+    // Check Connection Status
+    const { data: { user } } = await supabase.auth.getUser()
+    let isConnected = false
+    if (user) {
+        const { data: interaction } = await supabase.from('recruiter_interactions')
+            .select('*')
+            .eq('recruiter_id', user.id)
+            .eq('student_id', id)
+            .single()
+        isConnected = !!interaction
+    }
 
     // 4. Generate Narrative
     const transformationData = getTransformationNarrative(
@@ -75,7 +89,11 @@ export default async function CandidateDetailPage({ params }: { params: Promise<
                         </div>
 
                         {/* Actions */}
-                        <div className="flex gap-3 pb-2">
+                        <div className="flex gap-3 pb-2 items-center">
+                            <div className="w-32">
+                                <ConnectButton candidateId={profile.id} isConnected={!!isConnected} />
+                            </div>
+                            <ShareProfile name={profile.full_name || 'Candidate'} role={profile.headline || 'Executive'} />
                             <a href={profile.linkedin_url || "https://linkedin.com"} target="_blank" rel="noopener noreferrer">
                                 <Button variant="outline" size="icon" className="rounded-full border-slate-700 bg-slate-800/50 text-slate-300 hover:text-white hover:bg-slate-800 hover:border-[#0077b5] group">
                                     <Linkedin className="h-5 w-5 group-hover:text-[#0077b5]" />

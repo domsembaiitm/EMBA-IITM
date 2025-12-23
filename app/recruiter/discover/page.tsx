@@ -31,6 +31,7 @@ export default async function RecruiterDiscoverPage({
             organization,
             avatar_url,
             is_open_to_work,
+            domain,
             thinking_styles (
                 risk_appetite,
                 leadership_posture
@@ -44,11 +45,18 @@ export default async function RecruiterDiscoverPage({
         query = query.eq('is_open_to_work', true)
     }
 
-    // 2. Domain (Requires text search or exact match if we had a domain column)
-    // Since domain is derived from headline, we can't easily filter in SQL without a generated column.
-    // For MVP, we'll filter on client side or use ILIKE on headline/organization if simple.
-    // Let's rely on client-side filtering for complex domain logic for now, or just ignore if too complex.
-    // Actually, let's skip domain filter in SQL and do it in memory for the 50 students (safe for MVP).
+    // 2. Domain (Server-Side)
+    // Note: This relies on the new 'domain' column in profiles.
+    if (pendingParams.domain) {
+        query = query.eq('domain', pendingParams.domain)
+    }
+
+    // 3. Text Search (Server-Side)
+    const queryTerm = typeof pendingParams.q === 'string' ? pendingParams.q : null
+    if (queryTerm) {
+        const q = `%${queryTerm}%`
+        query = query.or(`full_name.ilike.${q},headline.ilike.${q},bio.ilike.${q},organization.ilike.${q}`)
+    }
 
     const { data: rawCandidates, error } = await query
 
@@ -57,38 +65,27 @@ export default async function RecruiterDiscoverPage({
         return <div>Error loading candidates</div>
     }
 
-    // Post-process candidates to match the Grid's expected format
+    // Post-process candidates
     let candidates = rawCandidates?.map(c => ({
         id: c.id,
         full_name: c.full_name,
-        headline: `${c.headline} • ${c.organization || 'Corporate'}`, // Combo headline
+        headline: `${c.headline} • ${c.organization || 'Corporate'}`,
         bio: c.bio,
         avatar_url: c.avatar_url,
         is_open_to_work: c.is_open_to_work,
-        domain: getDomainFromProfile(c.headline || '', c.organization || ''),
-        thinking_styles: c.thinking_styles // Array
+        domain: c.domain || getDomainFromProfile(c.headline || '', c.organization || ''), // Fallback to calculation if null (e.g. pre-migration)
+        thinking_styles: c.thinking_styles
     })) || []
 
-    // 2. Domain Filter (In-Memory)
-    if (pendingParams.domain) {
-        candidates = candidates.filter(c => c.domain === pendingParams.domain)
-    }
-
-    // 3. Risk Filter (In-Memory)
+    // 4. Risk Filter (In-Memory for now as it requires complex relational filtering)
     if (pendingParams.risk) {
         const minRisk = parseInt(pendingParams.risk as string)
         candidates = candidates.filter(c => c.thinking_styles?.[0]?.risk_appetite >= minRisk)
     }
 
-    // 4. Text Search (In-Memory) - "The Power Search"
-    const queryTerm = (pendingParams.q as string)?.toLowerCase()
-    if (queryTerm) {
-        candidates = candidates.filter(c =>
-            c.full_name?.toLowerCase().includes(queryTerm) ||
-            c.headline?.toLowerCase().includes(queryTerm) ||
-            c.bio?.toLowerCase().includes(queryTerm)
-        )
-    }
+    // 5. Client-Side Text Search Fallback (Double check or removal? Removal preferred if server side covers it)
+    // We already filtered by text on server, so we can remove the valid client side filter.
+
 
     // 4. Style Filter (In-Memory) is tricky without mapping, skipping for MVP stability.
 

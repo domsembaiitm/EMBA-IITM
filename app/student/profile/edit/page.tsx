@@ -10,6 +10,8 @@ import { updateProfile } from '@/app/student/actions'
 import { ArrowLeft, Upload } from 'lucide-react'
 import Link from 'next/link'
 import { ProfileEditForm } from '@/components/student/profile-edit-form'
+import { ProjectList } from '@/components/student/project-list'
+import { ProjectAddDialog } from '@/components/student/project-add-dialog'
 
 export default async function EditProfilePage() {
     const supabase = await createClient()
@@ -18,6 +20,8 @@ export default async function EditProfilePage() {
     if (!user) redirect('/auth/login')
 
     const { data: profile } = await supabase.from('profiles').select('*').eq('id', user.id).single()
+    const { data: projects } = await supabase.from('projects').select('*').eq('profile_id', user.id).order('created_at', { ascending: false })
+
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-slate-950 py-12 px-4">
@@ -42,6 +46,22 @@ export default async function EditProfilePage() {
                         <ProfileEditForm profile={profile} />
                     </CardContent>
                 </Card>
+
+                <Card>
+                    <CardHeader className="flex flex-row items-center justify-between">
+                        <div>
+                            <CardTitle>Project Portfolio</CardTitle>
+                            <CardDescription>
+                                Showcase your capstones and key initiatives.
+                            </CardDescription>
+                        </div>
+                        <ProjectAddDialog />
+                    </CardHeader>
+                    <CardContent>
+                        <ProjectList projects={projects || []} />
+                    </CardContent>
+                </Card>
+
             </div>
         </div>
     )
