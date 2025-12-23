@@ -40,8 +40,15 @@ export function ProfileEditForm({ profile }: { profile: any }) {
         }
     }
 
+    async function handleSubmit(formData: FormData) {
+        const result = await updateProfile(formData)
+        if (result?.error) {
+            setError(result.error)
+        }
+    }
+
     return (
-        <form action={updateProfile} className="space-y-6">
+        <form action={handleSubmit} className="space-y-6">
             {error && (
                 <div className="bg-red-50 text-red-600 p-3 rounded-md text-sm border border-red-200">
                     {error}
