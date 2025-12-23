@@ -7,11 +7,16 @@ import { useState } from 'react'
 export function ShareProfile({ name, role }: { name: string, role?: string }) {
     const [copied, setCopied] = useState(false)
 
-    const handleShare = () => {
+    const handleShare = async () => {
         if (typeof window !== 'undefined') {
-            navigator.clipboard.writeText(window.location.href)
-            setCopied(true)
-            setTimeout(() => setCopied(false), 2000)
+            try {
+                await navigator.clipboard.writeText(window.location.href)
+                setCopied(true)
+                setTimeout(() => setCopied(false), 2000)
+            } catch (err) {
+                // Fallback or Alert
+                alert("Could not copy link. URL: " + window.location.href)
+            }
         }
     }
 

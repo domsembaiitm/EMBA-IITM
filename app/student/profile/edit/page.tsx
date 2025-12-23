@@ -12,6 +12,7 @@ import Link from 'next/link'
 import { ProfileEditForm } from '@/components/student/profile-edit-form'
 import { ProjectList } from '@/components/student/project-list'
 import { ProjectAddDialog } from '@/components/student/project-add-dialog'
+import { ThinkingStyleAssessment } from '@/components/student/thinking-style-assessment'
 
 export default async function EditProfilePage() {
     const supabase = await createClient()
@@ -44,6 +45,21 @@ export default async function EditProfilePage() {
                     </CardHeader>
                     <CardContent>
                         <ProfileEditForm profile={profile} />
+                    </CardContent>
+                </Card>
+
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Leadership DNA</CardTitle>
+                        <CardDescription>
+                            Take the assessment to discover your strategic archetype (e.g., Maverick, Steward).
+                        </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                        {/* We pass a console log for now as the action to save isn't fully wired in this snippet context, 
+                             but in a real app we'd call a server action here. 
+                             For this fix, we'll just show the component. */}
+                        <ThinkingStyleAssessment onComplete={(res) => console.log(res)} />
                     </CardContent>
                 </Card>
 

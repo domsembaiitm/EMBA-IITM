@@ -16,8 +16,6 @@ export function ConnectButton({ candidateId, isConnected }: { candidateId: strin
         if (result?.error) {
             // alert(result.error)
             setStatus('idle')
-        } else if (result?.message === 'Already connected') {
-            setStatus('success')
         } else {
             setStatus('success')
         }

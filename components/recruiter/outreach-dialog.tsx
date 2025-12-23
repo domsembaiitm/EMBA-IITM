@@ -1,5 +1,6 @@
 "use client"
 
+import { sendOutreach } from "@/app/recruiter/actions"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { createClient } from "@/lib/supabase/client"
@@ -29,7 +30,7 @@ export function OutreachDialog({ studentId, studentName }: OutreachDialogProps) 
     const [open, setOpen] = useState(false)
     const [loading, setLoading] = useState(false)
     const [message, setMessage] = useState("")
-    const [guestDetails, setGuestDetails] = useState({ name: "", email: "", company: "" })
+    const [guestDetails, setGuestDetails] = useState({ name: "", email: "", company: "", intent: "Start a Conversation" })
     const [status, setStatus] = useState<"idle" | "success" | "error">("idle")
     const [isGuest, setIsGuest] = useState(false)
     const [user, setUser] = useState<any>(null)
@@ -54,7 +55,7 @@ export function OutreachDialog({ studentId, studentName }: OutreachDialogProps) 
                 setTimeout(() => {
                     setStatus('idle')
                     setMessage('')
-                    setGuestDetails({ name: "", email: "", company: "" })
+                    setGuestDetails({ name: "", email: "", company: "", intent: "Start a Conversation" })
                 }, 300)
             }
         }
@@ -70,36 +71,23 @@ export function OutreachDialog({ studentId, studentName }: OutreachDialogProps) 
                 return
             }
 
-            const payload = {
-                student_id: studentId,
-                status: 'interested',
-                message: message,
-                updated_at: new Date().toISOString(),
-                // If guest, store metadata in jsonb or separate fields. 
-                // For MVP schema compatibility, we might need a workaround if recruiter_id is NOT NULL.
-                // Assuming RLS allows insert if we handle it securely or using a server action with admin rights.
-                // Guest insertion is handled by RLS 'Public Insert' if allowed, or backend logic.
-                // For now, if user is not logged in, we might just show success message.
-                // In a real app we'd have a public 'leads' table.
-                recruiter_id: user?.id || '00000000-0000-0000-0000-000000000000',
-                metadata: isGuest ? guestDetails : {}
+            // Call Server Action
+            const result = await sendOutreach(
+                studentId,
+                guestDetails.intent,
+                message,
+                isGuest ? { name: guestDetails.name, email: guestDetails.email, company: guestDetails.company } : undefined
+            )
+
+            if (result.error) {
+                console.error(result.error)
+                setStatus('error')
+            } else {
+                setStatus('success')
+                setTimeout(() => {
+                    setOpen(false)
+                }, 2000)
             }
-
-            const { error } = await supabase
-                .from('recruiter_interactions')
-                .upsert(payload, { onConflict: 'recruiter_id, student_id' })
-
-            if (error) {
-                // In a production app, you might want to log this error to a monitoring service
-                // or show a more specific message to the user if the insert truly failed.
-                // For this flow, we're proceeding as if successful for a smoother user experience,
-                // assuming a backend process would eventually handle guest submissions.
-            }
-
-            setStatus('success')
-            setTimeout(() => {
-                setOpen(false)
-            }, 2000)
         } catch (error) {
             console.error('Error sending request:', error)
             setStatus('error')
@@ -150,6 +138,21 @@ export function OutreachDialog({ studentId, studentName }: OutreachDialogProps) 
                                     </div>
                                 </div>
                             )}
+
+                            <div className="space-y-1">
+                                <Label>Purpose</Label>
+                                <select
+                                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                                    value={guestDetails.intent || 'Start a Conversation'}
+                                    onChange={e => setGuestDetails({ ...guestDetails, intent: e.target.value })}
+                                >
+                                    <option value="Start a Conversation">Start a Conversation</option>
+                                    <option value="Hiring / Recruitment">Hiring / Recruitment</option>
+                                    <option value="Capstone Project">Capstone Project</option>
+                                    <option value="Advisory Role">Advisory Role</option>
+                                    <option value="Mentorship">Mentorship</option>
+                                </select>
+                            </div>
 
                             <div className="space-y-1">
                                 <Label>Message</Label>
