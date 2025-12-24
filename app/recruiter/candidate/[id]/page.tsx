@@ -13,7 +13,6 @@ import { cookies } from 'next/headers'
 import { OutreachDialog } from '@/components/recruiter/outreach-dialog'
 import { getTransformationNarrative } from '@/lib/transformation-logic'
 import { resolveAvatarUrl } from '@/lib/image-helper'
-import { ConnectButton } from '@/components/recruiter/connect-button'
 import { ShareProfile } from '@/components/recruiter/share-profile'
 import { PrintButton } from '@/components/recruiter/print-button'
 
@@ -91,9 +90,7 @@ export default async function CandidateDetailPage({ params }: { params: Promise<
 
                         {/* Actions */}
                         <div className="flex gap-3 pb-2 items-center">
-                            <div className="w-32">
-                                <ConnectButton candidateId={profile.id} isConnected={!!isConnected} />
-                            </div>
+
                             <ShareProfile name={profile.full_name || 'Candidate'} role={profile.headline || 'Executive'} />
                             <a href={profile.linkedin_url || "https://linkedin.com"} target="_blank" rel="noopener noreferrer">
                                 <Button variant="outline" size="icon" className="rounded-full border-slate-700 bg-slate-800/50 text-slate-300 hover:text-white hover:bg-slate-800 hover:border-[#0077b5] group">
