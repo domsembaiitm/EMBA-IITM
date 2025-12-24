@@ -14,7 +14,6 @@ import { ProjectList } from '@/components/student/project-list'
 import { ProjectAddDialog } from '@/components/student/project-add-dialog'
 import { ThinkingStyleAssessment } from '@/components/student/thinking-style-assessment'
 
-
 export default async function EditProfilePage() {
     const supabase = await createClient()
 
