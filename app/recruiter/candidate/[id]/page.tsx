@@ -100,75 +100,74 @@ export default async function CandidateDetailPage({ params }: { params: Promise<
                                     <Linkedin className="h-5 w-5 group-hover:text-[#0077b5]" />
                                 </Button>
                             </a>
-                        </a>
-                        <PrintButton />
-                    </div>
-                </div>
-            </div>
-        </div>
-
-            {/* 2. MAIN CONTENT GRID (Blog Layout) */ }
-    <div className="container mx-auto px-4 py-16 max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-
-            {/* LEFT COLUMN: The Narrative (Projects & Bio) */}
-            <div className="lg:col-span-8 space-y-16">
-
-                {/* 1. TRANSFORMATION ARC (The Structural Advantage) */}
-                <section>
-                    <TransformationArc data={transformationData} />
-                </section>
-
-                {/* 2. EXECUTIVE BIO */}
-                <section className="prose prose-lg dark:prose-invert max-w-none">
-                    <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-4 not-prose pl-4 border-l-4 border-blue-600">Executive Summary</h3>
-                    <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-lg">
-                        {profile.bio}
-                    </p>
-                </section>
-
-                {/* 3. APPLIED PROJECTS */}
-                <section>
-                    <div className="flex items-center justify-between mb-8">
-                        <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 border-l-4 border-amber-500 pl-4">Applied Intelligence Portfolio</h3>
-                        <div className="h-px flex-1 bg-slate-200 dark:bg-slate-800 ml-6"></div>
-                    </div>
-                    <ProjectList projects={projects || []} profileId={profile.id} isReadOnly={true} />
-                </section>
-
-                {/* CTA */}
-                <div className="bg-slate-50 dark:bg-slate-900 rounded-2xl p-8 text-center border border-slate-100 dark:border-slate-800">
-                    <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-3">Interested in this profile?</h3>
-                    <p className="text-slate-500 mb-6">Connect to discuss potential advisory roles or leadership opportunities.</p>
-                    <OutreachDialog studentId={profile.id} studentName={profile.full_name || 'Candidate'} />
-                </div>
-            </div>
-
-            {/* RIGHT COLUMN: The Data DNA (Sticky Sidebar) */}
-            <div className="lg:col-span-4">
-                <div className="sticky top-8 space-y-8">
-                    {/* Competency Map */}
-                    <CompetencyMap />
-
-                    {/* Psychometrics */}
-                    <div className="p-6 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
-                        <h4 className="font-bold text-slate-900 dark:text-slate-100 mb-6 flex items-center gap-2">
-                            <span className="h-2 w-2 rounded-full bg-purple-500"></span>
-                            Leadership DNA
-                        </h4>
-                        <ThinkingStyleSection thinkingStyle={thinkingStyle} profileId={profile.id} />
-                    </div>
-
-                    <div className="text-center">
-                        <Button variant="link" className="text-slate-400 text-xs">
-                            View Full 8-Quarter Curriculum &rarr;
-                        </Button>
+                            <PrintButton />
+                        </div>
                     </div>
                 </div>
             </div>
 
-        </div>
-    </div>
+            {/* 2. MAIN CONTENT GRID (Blog Layout) */}
+            <div className="container mx-auto px-4 py-16 max-w-7xl">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+                    {/* LEFT COLUMN: The Narrative (Projects & Bio) */}
+                    <div className="lg:col-span-8 space-y-16">
+
+                        {/* 1. TRANSFORMATION ARC (The Structural Advantage) */}
+                        <section>
+                            <TransformationArc data={transformationData} />
+                        </section>
+
+                        {/* 2. EXECUTIVE BIO */}
+                        <section className="prose prose-lg dark:prose-invert max-w-none">
+                            <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-4 not-prose pl-4 border-l-4 border-blue-600">Executive Summary</h3>
+                            <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-lg">
+                                {profile.bio}
+                            </p>
+                        </section>
+
+                        {/* 3. APPLIED PROJECTS */}
+                        <section>
+                            <div className="flex items-center justify-between mb-8">
+                                <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 border-l-4 border-amber-500 pl-4">Applied Intelligence Portfolio</h3>
+                                <div className="h-px flex-1 bg-slate-200 dark:bg-slate-800 ml-6"></div>
+                            </div>
+                            <ProjectList projects={projects || []} profileId={profile.id} isReadOnly={true} />
+                        </section>
+
+                        {/* CTA */}
+                        <div className="bg-slate-50 dark:bg-slate-900 rounded-2xl p-8 text-center border border-slate-100 dark:border-slate-800">
+                            <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-3">Interested in this profile?</h3>
+                            <p className="text-slate-500 mb-6">Connect to discuss potential advisory roles or leadership opportunities.</p>
+                            <OutreachDialog studentId={profile.id} studentName={profile.full_name || 'Candidate'} />
+                        </div>
+                    </div>
+
+                    {/* RIGHT COLUMN: The Data DNA (Sticky Sidebar) */}
+                    <div className="lg:col-span-4">
+                        <div className="sticky top-8 space-y-8">
+                            {/* Competency Map */}
+                            <CompetencyMap />
+
+                            {/* Psychometrics */}
+                            <div className="p-6 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+                                <h4 className="font-bold text-slate-900 dark:text-slate-100 mb-6 flex items-center gap-2">
+                                    <span className="h-2 w-2 rounded-full bg-purple-500"></span>
+                                    Leadership DNA
+                                </h4>
+                                <ThinkingStyleSection thinkingStyle={thinkingStyle} profileId={profile.id} />
+                            </div>
+
+                            <div className="text-center">
+                                <Button variant="link" className="text-slate-400 text-xs">
+                                    View Full 8-Quarter Curriculum &rarr;
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div >
     )
 }

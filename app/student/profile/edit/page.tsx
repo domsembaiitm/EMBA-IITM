@@ -93,6 +93,7 @@ export default async function EditProfilePage() {
                 </Card>
 
             </div>
-            )
+        </div>
+    )
 }
 
