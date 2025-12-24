@@ -18,23 +18,10 @@ export default async function Home() {
     .eq('is_hidden', false)
     .limit(3)
 
-  // Fallback stats (Real-time DB query)
-  const { count: totalStudents } = await supabase
-    .from('profiles')
-    .select('*', { count: 'exact', head: true })
-    .eq('role', 'student')
-    .eq('is_hidden', false)
-
-  // Use a simple RPC or avg query if available, for now we will calculate it from a sample or keep it static if too expensive.
-  // Efficiency: Fetching just the work_experience column for aggregation is acceptable for <1000 users.
-  const { data: allExp } = await supabase
-    .from('profiles')
-    .select('work_experience')
-    .eq('role', 'student')
-    .not('work_experience', 'is', null)
-
-  const totalMonths = allExp?.reduce((acc, curr) => acc + (curr.work_experience || 0), 0) || 0;
-  const avgExperience = allExp?.length ? Math.floor((totalMonths / allExp.length) / 12) : 15;
+  // Fallback stats (Real-time DB query via RPC to bypass RLS for aggregates)
+  const { data: stats } = await supabase.rpc('get_cohort_stats')
+  const totalStudents = stats?.[0]?.total_students || 49
+  const avgExperience = stats?.[0]?.avg_experience ? Math.floor(stats[0].avg_experience / 12) : 15
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-950 font-sans selection:bg-blue-100">
