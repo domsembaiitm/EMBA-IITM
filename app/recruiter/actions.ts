@@ -38,14 +38,17 @@ export async function sendOutreach(candidateId: string, intent: string, message:
 
     // 2. RATE LIMIT CHECK
     const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000).toISOString()
-    const { count } = await supabase
-        .from('recruiter_interactions')
-        .select('*', { count: 'exact', head: true })
-        .eq('recruiter_id', user.id)
-        .gte('created_at', oneHourAgo)
+    // Only check if we have a real user (not guest)
+    if (user) {
+        const { count } = await supabase
+            .from('recruiter_interactions')
+            .select('*', { count: 'exact', head: true })
+            .eq('recruiter_id', user.id)
+            .gte('created_at', oneHourAgo)
 
-    if (count && count >= 10) {
-        return { error: 'Rate limit exceeded. Max 10 connections/hour.' }
+        if (count && count >= 10) {
+            return { error: 'Rate limit exceeded. Max 10 connections/hour.' }
+        }
     }
 
     // 3. Record Interaction

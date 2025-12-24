@@ -168,6 +168,6 @@ export default async function CandidateDetailPage({ params }: { params: Promise<
 
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
