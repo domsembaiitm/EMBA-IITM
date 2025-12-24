@@ -72,7 +72,7 @@ export async function sendOutreach(candidateId: string, intent: string, message:
 
     // 5. AUDIT LOG
     await supabase.from('audit_logs').insert({
-        actor_id: user.id,
+        actor_id: user?.id || null,
         action: 'CONNECT_REQUEST',
         target_id: candidateId,
         metadata: { timestamp: new Date().toISOString() }
