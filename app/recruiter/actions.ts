@@ -36,6 +36,18 @@ export async function sendOutreach(candidateId: string, intent: string, message:
     // For MVP/Demo: Fetch profile directly
     const { data: student } = await supabase.from('profiles').select('email, full_name').eq('id', candidateId).single()
 
+    // 2. RATE LIMIT CHECK
+    const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000).toISOString()
+    const { count } = await supabase
+        .from('recruiter_interactions')
+        .select('*', { count: 'exact', head: true })
+        .eq('recruiter_id', user.id)
+        .gte('created_at', oneHourAgo)
+
+    if (count && count >= 10) {
+        return { error: 'Rate limit exceeded. Max 10 connections/hour.' }
+    }
+
     // 3. Record Interaction
     const { error } = await supabase
         .from('recruiter_interactions')
@@ -51,12 +63,17 @@ export async function sendOutreach(candidateId: string, intent: string, message:
         return { error: error.message }
     }
 
-    // 4. Send Notification
-    if (student?.email) {
-        await sendRecruiterNotification(student.email, student.full_name || 'Student', recruiterName, companyName, intent, message)
-    } else {
-        console.warn("Could not email student: Email not found in profile.")
-    }
+    // 4. Send Notification (Stub for Resend/SMTP)
+    // console.log("Sending email to", student?.email)
+    // In production: await resend.send(...)
+
+    // 5. AUDIT LOG
+    await supabase.from('audit_logs').insert({
+        actor_id: user.id,
+        action: 'CONNECT_REQUEST',
+        target_id: candidateId,
+        metadata: { timestamp: new Date().toISOString() }
+    })
 
     revalidatePath(`/recruiter/candidate/${candidateId}`)
     return { success: true }
