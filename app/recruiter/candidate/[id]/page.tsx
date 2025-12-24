@@ -7,7 +7,7 @@ import { ProjectList } from '@/components/student/project-list'
 import { CompetencyMap } from '@/components/student/competency-map'
 import { TransformationArc } from '@/components/student/transformation-arc'
 import { Button } from '@/components/ui/button'
-import { Printer, Linkedin, MessageSquarePlus, Share2, ArrowLeft } from 'lucide-react'
+import { Printer, Linkedin, MessageSquarePlus, Share2, ArrowLeft, Mail } from 'lucide-react'
 import Link from 'next/link'
 import { cookies } from 'next/headers'
 import { OutreachDialog } from '@/components/recruiter/outreach-dialog'
@@ -86,6 +86,12 @@ export default async function CandidateDetailPage({ params }: { params: Promise<
                             <p className="text-xl md:text-2xl text-slate-300 font-light max-w-3xl leading-relaxed">
                                 {profile.headline}
                             </p>
+                            <div className="flex items-center gap-2 mt-4 text-slate-400">
+                                <Mail className="h-4 w-4" />
+                                <a href={`mailto:${profile.email}`} className="hover:text-white transition-colors">
+                                    {profile.email}
+                                </a>
+                            </div>
                         </div>
 
                         {/* Actions */}
