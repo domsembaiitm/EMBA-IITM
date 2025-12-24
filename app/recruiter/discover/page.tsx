@@ -69,7 +69,13 @@ export default async function RecruiterDiscoverPage({
 
     if (error) {
         console.error("Error fetching candidates:", error)
-        return <div>Error loading candidates</div>
+        console.error("Error fetching candidates:", error)
+        return (
+            <div className="p-8 text-red-500 border border-red-200 bg-red-50 rounded">
+                <h3 className="font-bold">Error loading candidates</h3>
+                <pre className="text-xs mt-2">{JSON.stringify(error, null, 2)}</pre>
+            </div>
+        )
     }
 
     // Post-process candidates
