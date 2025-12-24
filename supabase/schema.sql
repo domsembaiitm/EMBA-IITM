@@ -145,6 +145,8 @@ CREATE POLICY "Thinking styles viewable by recruiters" ON public.thinking_styles
         EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'recruiter')
     );
 
+DROP POLICY IF EXISTS "Public thinking styles" ON public.thinking_styles;
+
 CREATE POLICY "Public thinking styles" ON public.thinking_styles
     FOR SELECT USING (
         EXISTS (

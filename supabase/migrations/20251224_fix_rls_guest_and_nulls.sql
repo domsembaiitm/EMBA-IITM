@@ -1,5 +1,7 @@
 -- FIX 3: Allow Public Access to Thinking Styles (Linked to Profile Visibility)
 -- This fixes the "Error loading candidates" for guests, as the query joins thinking_styles.
+DROP POLICY IF EXISTS "Public thinking styles" ON public.thinking_styles;
+
 CREATE POLICY "Public thinking styles" ON public.thinking_styles
     FOR SELECT USING (
         EXISTS (
