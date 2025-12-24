@@ -163,3 +163,40 @@ export async function deleteProject(projectId: string) {
     return { success: true }
 }
 
+
+// 5. Thinking Style & Privacy Actions
+export async function updateThinkingStyle(style: { risk_appetite: number, leadership_posture: number, archetype: string }) {
+    const supabase = await createClient()
+    const { data: { user } } = await supabase.auth.getUser()
+    if (!user) return { error: 'Unauthorized' }
+
+    // Upsert Thinking Style
+    const { error } = await supabase.from('thinking_styles').upsert({
+        profile_id: user.id,
+        risk_appetite: style.risk_appetite,
+        leadership_posture: style.leadership_posture,
+        // We could store archetype in metadata or a new column if exists, 
+        // for now we stick to the schema which generates it dynamically or decision_style
+        decision_style: { archetype: style.archetype }
+    }, { onConflict: 'profile_id' })
+
+    if (error) return { error: error.message }
+    revalidatePath('/student/profile')
+    return { success: true }
+}
+
+export async function updatePrivacySettings(blockedDomains: string[]) {
+    const supabase = await createClient()
+    const { data: { user } } = await supabase.auth.getUser()
+    if (!user) return { error: 'Unauthorized' }
+
+    // Update Profile Blocklist
+    const { error } = await supabase.from('profiles').update({
+        blocked_domains: blockedDomains,
+        updated_at: new Date().toISOString()
+    }).eq('id', user.id)
+
+    if (error) return { error: error.message }
+    revalidatePath('/student/profile')
+    return { success: true }
+}

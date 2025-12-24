@@ -15,6 +15,9 @@ export type ThinkingStyle = {
     archetype: string
 }
 
+import { updateThinkingStyle } from "@/app/student/actions" // Added import
+import { toast } from "sonner" // Added import
+
 const QUESTIONS = [
     {
         id: 1,
@@ -93,11 +96,19 @@ export function ThinkingStyleAssessment({ onComplete }: { onComplete: (style: Th
         else if (avgRisk <= 6 && avgLead > 6) archetype = "Driver"
         else archetype = "Steward"
 
-        onComplete({
+        const style = {
             risk_appetite: avgRisk,
             leadership_posture: avgLead,
             archetype
+        }
+
+        // Call Server Action
+        updateThinkingStyle(style).then(res => {
+            if (res?.error) toast.error(res.error)
+            else toast.success("Leadership DNA Updated")
         })
+
+        onComplete(style)
     }
 
     const currentQ = QUESTIONS[step]

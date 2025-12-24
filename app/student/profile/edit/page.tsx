@@ -13,6 +13,8 @@ import { ProfileEditForm } from '@/components/student/profile-edit-form'
 import { ProjectList } from '@/components/student/project-list'
 import { ProjectAddDialog } from '@/components/student/project-add-dialog'
 import { ThinkingStyleAssessment } from '@/components/student/thinking-style-assessment'
+import { PrivacySettings } from '@/components/student/privacy-settings'
+import { Shield } from 'lucide-react'
 
 export default async function EditProfilePage() {
     const supabase = await createClient()
@@ -55,31 +57,44 @@ export default async function EditProfilePage() {
                             Take the assessment to discover your strategic archetype (e.g., Maverick, Steward).
                         </CardDescription>
                     </CardHeader>
-                    <CardContent>
-                        {/* We pass a console log for now as the action to save isn't fully wired in this snippet context, 
-                             but in a real app we'd call a server action here. 
-                             For this fix, we'll just show the component. */}
-                        <ThinkingStyleAssessment onComplete={(res) => console.log(res)} />
-                    </CardContent>
-                </Card>
+                </CardHeader>
+                <CardContent>
+                    <ThinkingStyleAssessment onComplete={() => { }} />
+                </CardContent>
+            </Card>
 
-                <Card>
-                    <CardHeader className="flex flex-row items-center justify-between">
-                        <div>
-                            <CardTitle>Project Portfolio</CardTitle>
-                            <CardDescription>
-                                Showcase your capstones and key initiatives.
-                            </CardDescription>
-                        </div>
-                        <ProjectAddDialog />
-                    </CardHeader>
-                    <CardContent>
-                        <ProjectList projects={projects || []} />
-                    </CardContent>
-                </Card>
+            <Card>
+                <CardHeader>
+                    <CardTitle className="text-red-600 flex items-center gap-2">
+                        <Shield className="h-5 w-5" />
+                        Privacy & Blocklist
+                    </CardTitle>
+                    <CardDescription>
+                        Prevent recruiters from specific domains (e.g. current employer) from seeing your profile.
+                    </CardDescription>
+                </CardHeader>
+                <CardContent>
+                    <PrivacySettings initialBlockedDomains={profile?.blocked_domains || []} />
+                </CardContent>
+            </Card>
 
-            </div>
+            <Card>
+                <CardHeader className="flex flex-row items-center justify-between">
+                    <div>
+                        <CardTitle>Project Portfolio</CardTitle>
+                        <CardDescription>
+                            Showcase your capstones and key initiatives.
+                        </CardDescription>
+                    </div>
+                    <ProjectAddDialog />
+                </CardHeader>
+                <CardContent>
+                    <ProjectList projects={projects || []} />
+                </CardContent>
+            </Card>
+
         </div>
+        </div >
     )
 }
 
