@@ -103,6 +103,7 @@ export async function updateProfile(formData: FormData) {
         is_open_to_work: isOpenToWork,
         work_experience: workExperience,
         domain: narrative.identity.domain,
+        privacy_settings: { public_visibility: isOpenToWork }, // SYNC: Open to Work = Public Visibility
         updated_at: new Date().toISOString()
     }
 

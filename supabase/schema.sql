@@ -130,7 +130,7 @@ CREATE POLICY "Recruiters can view students" ON public.profiles
         AND role = 'student'
         -- Enforce Blocklist (Null Safe)
         AND NOT (
-            split_part(COALESCE(auth.jwt() ->> 'email', ''), '@', 2) = ANY(COALESCE(blocked_domains, '{}'))
+            lower(split_part(COALESCE(auth.jwt() ->> 'email', ''), '@', 2)) = ANY(COALESCE(blocked_domains, '{}'))
         )
     );
 

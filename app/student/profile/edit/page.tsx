@@ -13,8 +13,7 @@ import { ProfileEditForm } from '@/components/student/profile-edit-form'
 import { ProjectList } from '@/components/student/project-list'
 import { ProjectAddDialog } from '@/components/student/project-add-dialog'
 import { ThinkingStyleAssessment } from '@/components/student/thinking-style-assessment'
-import { PrivacySettings } from '@/components/student/privacy-settings'
-import { Shield } from 'lucide-react'
+import { ThinkingStyleAssessment } from '@/components/student/thinking-style-assessment'
 
 export default async function EditProfilePage() {
     const supabase = await createClient()
@@ -62,20 +61,7 @@ export default async function EditProfilePage() {
                     </CardContent>
                 </Card>
 
-                <Card>
-                    <CardHeader>
-                        <CardTitle className="text-red-600 flex items-center gap-2">
-                            <Shield className="h-5 w-5" />
-                            Privacy & Blocklist
-                        </CardTitle>
-                        <CardDescription>
-                            Prevent recruiters from specific domains (e.g. current employer) from seeing your profile.
-                        </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                        <PrivacySettings initialBlockedDomains={profile?.blocked_domains || []} />
-                    </CardContent>
-                </Card>
+
 
                 <Card>
                     <CardHeader className="flex flex-row items-center justify-between">

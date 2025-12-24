@@ -140,9 +140,16 @@ export function ProfileEditForm({ profile }: { profile: any }) {
                 </div>
             </div>
 
-            <div className="flex items-center space-x-2">
-                <input type="checkbox" id="is_open_to_work" name="is_open_to_work" defaultChecked={profile?.is_open_to_work} className="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
-                <Label htmlFor="is_open_to_work">Open to new opportunities</Label>
+            <div className="flex items-center space-x-2 border p-4 rounded-md bg-blue-50/50 border-blue-100">
+                <input type="checkbox" id="is_open_to_work" name="is_open_to_work" defaultChecked={profile?.is_open_to_work} className="h-5 w-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
+                <Label htmlFor="is_open_to_work" className="font-medium cursor-pointer">
+                    Enable Public Visibility
+                    <span className="block text-xs text-slate-500 font-normal">
+                        Your profile will be visible to all recruiters in the Talent Discovery pool.
+                        <br />
+                        <span className="text-amber-600">Uncheck this to make your profile completely private (Ghost Mode).</span>
+                    </span>
+                </Label>
             </div>
 
             <div className="pt-4 flex justify-end gap-2">
