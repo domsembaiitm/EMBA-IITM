@@ -106,9 +106,7 @@ export default async function RecruiterDiscoverPage({
                     <div className="flex justify-between items-end">
                         <div>
                             <h1 className="text-3xl font-serif text-slate-900 dark:text-slate-50">Executive Talent Pool</h1>
-                            <p className="text-slate-500 mt-2 text-lg">
-                                Curated profiles from the <span className="font-semibold text-slate-900">Class of 2027</span>.
-                            </p>
+
                         </div>
                         <div className="hidden md:block">
                             <SearchToolbar />
