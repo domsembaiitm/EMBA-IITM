@@ -57,44 +57,42 @@ export default async function EditProfilePage() {
                             Take the assessment to discover your strategic archetype (e.g., Maverick, Steward).
                         </CardDescription>
                     </CardHeader>
-                </CardHeader>
-                <CardContent>
-                    <ThinkingStyleAssessment onComplete={() => { }} />
-                </CardContent>
-            </Card>
+                    <CardContent>
+                        <ThinkingStyleAssessment onComplete={() => { }} />
+                    </CardContent>
+                </Card>
 
-            <Card>
-                <CardHeader>
-                    <CardTitle className="text-red-600 flex items-center gap-2">
-                        <Shield className="h-5 w-5" />
-                        Privacy & Blocklist
-                    </CardTitle>
-                    <CardDescription>
-                        Prevent recruiters from specific domains (e.g. current employer) from seeing your profile.
-                    </CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <PrivacySettings initialBlockedDomains={profile?.blocked_domains || []} />
-                </CardContent>
-            </Card>
-
-            <Card>
-                <CardHeader className="flex flex-row items-center justify-between">
-                    <div>
-                        <CardTitle>Project Portfolio</CardTitle>
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-red-600 flex items-center gap-2">
+                            <Shield className="h-5 w-5" />
+                            Privacy & Blocklist
+                        </CardTitle>
                         <CardDescription>
-                            Showcase your capstones and key initiatives.
+                            Prevent recruiters from specific domains (e.g. current employer) from seeing your profile.
                         </CardDescription>
-                    </div>
-                    <ProjectAddDialog />
-                </CardHeader>
-                <CardContent>
-                    <ProjectList projects={projects || []} />
-                </CardContent>
-            </Card>
+                    </CardHeader>
+                    <CardContent>
+                        <PrivacySettings initialBlockedDomains={profile?.blocked_domains || []} />
+                    </CardContent>
+                </Card>
 
-        </div>
-        </div >
-    )
+                <Card>
+                    <CardHeader className="flex flex-row items-center justify-between">
+                        <div>
+                            <CardTitle>Project Portfolio</CardTitle>
+                            <CardDescription>
+                                Showcase your capstones and key initiatives.
+                            </CardDescription>
+                        </div>
+                        <ProjectAddDialog />
+                    </CardHeader>
+                    <CardContent>
+                        <ProjectList projects={projects || []} />
+                    </CardContent>
+                </Card>
+
+            </div>
+            )
 }
 

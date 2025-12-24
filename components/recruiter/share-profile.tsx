@@ -1,22 +1,39 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { Share2, Check } from 'lucide-react'
+import { Share2, Check, Link as LinkIcon } from 'lucide-react'
 import { useState } from 'react'
+import { toast } from 'sonner'
 
 export function ShareProfile({ name, role }: { name: string, role?: string }) {
     const [copied, setCopied] = useState(false)
 
     const handleShare = async () => {
-        if (typeof window !== 'undefined') {
+        if (typeof window === 'undefined') return
+
+        const url = window.location.href
+        const title = `${name} - EMBA Profile`
+        const text = `Check out ${name}'s executive profile.`
+
+        // 1. Try Native Share Sheet (Mobile/Safari)
+        if (navigator.share) {
             try {
-                await navigator.clipboard.writeText(window.location.href)
-                setCopied(true)
-                setTimeout(() => setCopied(false), 2000)
+                await navigator.share({ title, text, url })
+                return
             } catch (err) {
-                // Fallback or Alert
-                alert("Could not copy link. URL: " + window.location.href)
+                // User cancelled or share failed, fall through to clipboard
+                console.log('Share sheet refused, falling back to clipboard')
             }
+        }
+
+        // 2. Fallback to Clipboard
+        try {
+            await navigator.clipboard.writeText(url)
+            setCopied(true)
+            toast.success("Profile link copied to clipboard")
+            setTimeout(() => setCopied(false), 2000)
+        } catch (err) {
+            toast.error("Failed to copy link")
         }
     }
 
