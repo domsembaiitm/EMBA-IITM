@@ -32,7 +32,7 @@ export default async function Home() {
           <div className="flex flex-col md:flex-row justify-between items-start gap-12">
             <div className="space-y-8 max-w-3xl">
               <Badge variant="outline" className="border-slate-300 text-slate-500 uppercase tracking-widest text-[11px] px-3 py-1 bg-transparent">
-                Executive MBA Class of 2027 at DOMS IIT-Madras
+                Executive MBA Profiles from DOMS IIT-Madras
               </Badge>
 
               <h1 className="text-6xl md:text-8xl font-serif font-medium text-slate-900 dark:text-white leading-[0.9] tracking-tight">
@@ -213,7 +213,7 @@ export default async function Home() {
 
       {/* FOOTER */}
       <footer className="py-12 border-t border-slate-100 dark:border-slate-800 text-center text-slate-400 text-sm">
-        <p>© 2025 Executive MBA Class of 2027 at DOMS IIT-Madras. All rights reserved.</p>
+        <p>© 2026 Executive MBA Profiles from DOMS IIT-Madras. All rights reserved.</p>
       </footer>
     </div>
   )
