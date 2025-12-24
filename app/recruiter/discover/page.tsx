@@ -117,11 +117,7 @@ export default async function RecruiterDiscoverPage({
                 </div>
             </main>
 
-            {!user && (
-                <div className="fixed bottom-4 right-4 bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-xs font-bold shadow-lg border border-amber-200">
-                    GUEST MODE (Limited View)
-                </div>
-            )}
+
         </div>
     )
 }
