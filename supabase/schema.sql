@@ -126,7 +126,7 @@ CREATE POLICY "Users can update own profile" ON public.profiles
 -- RLS enforcing blocklist in SQL is expensive but safer.
 CREATE POLICY "Recruiters can view students" ON public.profiles
     FOR SELECT USING (
-        auth.uid() IN (SELECT id FROM profiles WHERE role = 'recruiter')
+        check_user_role('recruiter')
         AND role = 'student'
         -- Enforce Blocklist (Null Safe)
         AND NOT (
@@ -142,7 +142,7 @@ CREATE POLICY "Thinking styles viewable by owner" ON public.thinking_styles
 
 CREATE POLICY "Thinking styles viewable by recruiters" ON public.thinking_styles
     FOR SELECT USING (
-        EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'recruiter')
+        check_user_role('recruiter')
     );
 
 DROP POLICY IF EXISTS "Public thinking styles" ON public.thinking_styles;
@@ -197,6 +197,24 @@ CREATE INDEX idx_thinking_styles_profile_id ON public.thinking_styles(profile_id
 CREATE INDEX idx_audit_created_at ON public.audit_logs(timestamp);
 
 -- 11. FUNCTIONS
+
+-- HELPER: Check User Role (Bypasses RLS to avoid recursion)
+CREATE OR REPLACE FUNCTION public.check_user_role(required_role user_role)
+RETURNS BOOLEAN
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+BEGIN
+  RETURN EXISTS (
+    SELECT 1 FROM profiles
+    WHERE id = auth.uid()
+    AND role = required_role
+  );
+END;
+$$;
+GRANT EXECUTE ON FUNCTION public.check_user_role TO anon, authenticated, service_role;
+
 -- Function to handle new user signup
 CREATE OR REPLACE FUNCTION public.handle_new_user()
 RETURNS TRIGGER AS $$

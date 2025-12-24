@@ -170,7 +170,7 @@ export default async function Home() {
           <div className="flex justify-between items-end mb-12">
             <div>
               <h2 className="text-3xl font-serif text-slate-900 dark:text-white mb-2">Featured Profiles</h2>
-              <p className="text-slate-500">A glimpse into the diverse leadership potential of the Class of 2027.</p>
+              <p className="text-slate-500">A glimpse into the diverse leadership profiles.</p>
             </div>
             <Link href="/recruiter/discover" className="hidden md:flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-blue-600 hover:underline">
               View All <ArrowRight className="h-4 w-4" />
