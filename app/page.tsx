@@ -120,8 +120,7 @@ export default async function Home() {
                 Beyond the Resume.
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed">
-                Traditional hiring relies on static history. The EMBA Talent Platform reveals <strong>trajectory</strong>.
-                We evaluate candidates not just on where they've been, but on how they think, lead, and solve complex problems.
+                Traditional hiring relies on static history. The EMBA Talent Discovery Platform reveals candidate&apos;s trajectory and how they think, lead, and solve complex problems.
               </p>
 
               <ul className="space-y-4 pt-4">
