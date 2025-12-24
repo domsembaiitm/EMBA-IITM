@@ -31,7 +31,6 @@ export default async function RecruiterDiscoverPage({
             organization,
             avatar_url,
             is_open_to_work,
-            domain,
             thinking_styles (
                 risk_appetite,
                 leadership_posture
@@ -81,7 +80,7 @@ export default async function RecruiterDiscoverPage({
         bio: c.bio,
         avatar_url: c.avatar_url,
         is_open_to_work: c.is_open_to_work,
-        domain: c.domain || getDomainFromProfile(c.headline || '', c.organization || ''), // Fallback to calculation if null (e.g. pre-migration)
+        domain: getDomainFromProfile(c.headline || '', c.organization || ''), // Calculated fallback
         thinking_styles: c.thinking_styles
     })) || []
 

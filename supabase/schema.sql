@@ -128,9 +128,9 @@ CREATE POLICY "Recruiters can view students" ON public.profiles
     FOR SELECT USING (
         auth.uid() IN (SELECT id FROM profiles WHERE role = 'recruiter')
         AND role = 'student'
-        -- Enforce Blocklist: Recruiter's domain must NOT be in student's blocklist
+        -- Enforce Blocklist (Null Safe)
         AND NOT (
-            split_part(auth.jwt() ->> 'email', '@', 2) = ANY(blocked_domains)
+            split_part(COALESCE(auth.jwt() ->> 'email', ''), '@', 2) = ANY(COALESCE(blocked_domains, '{}'))
         )
     );
 
@@ -143,6 +143,15 @@ CREATE POLICY "Thinking styles viewable by owner" ON public.thinking_styles
 CREATE POLICY "Thinking styles viewable by recruiters" ON public.thinking_styles
     FOR SELECT USING (
         EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'recruiter')
+    );
+
+CREATE POLICY "Public thinking styles" ON public.thinking_styles
+    FOR SELECT USING (
+        EXISTS (
+            SELECT 1 FROM profiles 
+            WHERE id = thinking_styles.profile_id 
+            AND (privacy_settings->>'public_visibility')::boolean = true
+        )
     );
 
 -- Courses Policies
