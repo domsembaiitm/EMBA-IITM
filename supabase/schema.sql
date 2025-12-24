@@ -128,7 +128,10 @@ CREATE POLICY "Recruiters can view students" ON public.profiles
     FOR SELECT USING (
         auth.uid() IN (SELECT id FROM profiles WHERE role = 'recruiter')
         AND role = 'student'
-        -- AND NOT (auth.email() ILIKE ANY(blocked_domains)) -- Conceptual logic
+        -- Enforce Blocklist: Recruiter's domain must NOT be in student's blocklist
+        AND NOT (
+            split_part(auth.jwt() ->> 'email', '@', 2) = ANY(blocked_domains)
+        )
     );
 
 -- Thinking Styles Policies

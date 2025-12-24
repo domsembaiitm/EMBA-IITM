@@ -40,6 +40,14 @@ export default async function RecruiterDiscoverPage({
         .eq('role', 'student')
         .eq('is_hidden', false)
 
+    // 4. Thinking Style Filter (Server-Side with !inner join)
+    if (pendingParams.risk) {
+        const minRisk = parseInt(pendingParams.risk as string)
+        // !inner ensures we only get profiles that match the thinking_style criteria
+        query = query.not('thinking_styles', 'is', null) // Ensure relationship exists
+            .gte('thinking_styles.risk_appetite', minRisk) // Note: This requires Supabase PostgREST 12+ dot notation or explicit inner join syntax if older
+    }
+
     // 1. Availability
     if (pendingParams.available === 'true') {
         query = query.eq('is_open_to_work', true)
@@ -54,8 +62,8 @@ export default async function RecruiterDiscoverPage({
     // 3. Text Search (Server-Side)
     const queryTerm = typeof pendingParams.q === 'string' ? pendingParams.q : null
     if (queryTerm) {
-        const q = `%${queryTerm}%`
-        query = query.or(`full_name.ilike.${q},headline.ilike.${q},bio.ilike.${q},organization.ilike.${q}`)
+        const q = `% ${queryTerm} % `
+        query = query.or(`full_name.ilike.${q}, headline.ilike.${q}, bio.ilike.${q}, organization.ilike.${q}`)
     }
 
     const { data: rawCandidates, error } = await query
@@ -77,17 +85,7 @@ export default async function RecruiterDiscoverPage({
         thinking_styles: c.thinking_styles
     })) || []
 
-    // 4. Risk Filter (In-Memory for now as it requires complex relational filtering)
-    if (pendingParams.risk) {
-        const minRisk = parseInt(pendingParams.risk as string)
-        candidates = candidates.filter(c => c.thinking_styles?.[0]?.risk_appetite >= minRisk)
-    }
-
-    // 5. Client-Side Text Search Fallback (Double check or removal? Removal preferred if server side covers it)
-    // We already filtered by text on server, so we can remove the valid client side filter.
-
-
-    // 4. Style Filter (In-Memory) is tricky without mapping, skipping for MVP stability.
+    // 5. Client-Side Text Search Fallback REMOVED (Server side covers it)
 
     return (
         <div className="flex h-screen bg-slate-50 dark:bg-slate-950 overflow-hidden">
